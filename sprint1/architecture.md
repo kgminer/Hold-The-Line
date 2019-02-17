@@ -62,4 +62,8 @@ We will be using Unity as the framework for creating our game. Unity already com
 
 # Reuse
 
+We are not planning on reusing any preexisting software that we have made, so reusability does not apply.
+
 # Change Strategy
+
+We will design our program to be abstract enough to handle changes should they occur during construction.
