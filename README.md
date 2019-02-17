@@ -15,7 +15,7 @@ The videogame (Hold the Line) is a 2D platformer arcade game. It is designed for
 
 - [Product Backlog](https://github.com/kgminer/Warlords/blob/master/sprint1/product_backlog.md)
 - [Sprint Backlog](https://github.com/kgminer/Warlords/blob/master/sprint1/sprint_backlog.md)
-  - Burndown Chart
+  - [Burndown Chart](https://docs.google.com/spreadsheets/d/1a_QnmUb2sFXtWjDx9MVTHSyMXuMD_THkIH4JoGAiF_U/edit#gid=0)
 - [Requirements](https://github.com/kgminer/Warlords/blob/master/sprint1/requirements.md)
 - Design Documents
   - [System Architecture](https://github.com/kgminer/Warlords/blob/master/sprint1/architecture.md)
