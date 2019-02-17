@@ -8,19 +8,33 @@ Populate each section with information as it applies to your project. If a secti
 
 # Business Rules
 
+There are no business rules in this project. The project is a game that isn't affected by external rules. 
+
 # User Interface Design
 
 # Resource Management
 
+There are no scarse resources in this project. Therefore, there is no need for resourse management.
+
 # Security
+
+No security measures are needed. The most we are storing are usenames for the players.
 
 # Performance
 
+The game should run at about 30 frames per second. There are going to be projectiles moving at different speeds and respose times is an important factor to win the game.
+
 # Scalability
+
+This game is currently designed to be a local game where there is no online connectivity.
 
 # Interoperability
 
+This game will not communvate with other sortware or hardware. 
+
 # Internationalization/Localization
+
+This game will be in English only since it won't be distributed internationally. We will be using string in line in the code where they're needed.
 
 # Input/Output
 
