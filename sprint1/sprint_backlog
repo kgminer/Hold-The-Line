@@ -1,6 +1,7 @@
 # Sprint Backlog (2019-01-30 to 2019-02-19)
 
 | ID | User Story | Effort | Priority | Validation Criteria | Owner |
+|----|------------|--------|----------|---------------------|-------|
 | 004|As a player, I want a main menu, so I can navigate throughout the game.|      2 |        2 |Main menu screen shows up when the game launches, and the user is able to start a new game from the menu.|Kenneth Gerhart|
 | 009|As a player, I want the ability to select items on the menu.|      3 |        2 |A button is used on the menu to navigate the menu.|-------|
 | 011|As a player, I want the ability to navigate backwards in menus.|      3 |        3 |When a button is pressed on the input device (B button), the user will go back to the previous menu.|-------|
