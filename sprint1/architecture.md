@@ -14,7 +14,7 @@ There are no business rules in this project. The project is a game that isn't af
 
 # Resource Management
 
-There are no scarse resources in this project. Therefore, there is no need for resourse management.
+There are no scarse resources in this project. Therefore, there is no need for resource management.
 
 # Security
 
@@ -46,7 +46,11 @@ Error processing will be corrective and active for incorrect data input before t
 
 # Fault Tolerance
 
+If any projectiles or paddles were to go out of the arena, then these items are to be placed back to its last spot in the arena and played normally.
+
 # Architectural Feasibility
+
+There are no architectural concerns in the project where it would hinder the performance requirements. 
 
 # Overengineering
 
