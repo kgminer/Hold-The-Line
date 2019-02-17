@@ -54,6 +54,8 @@ There are no architectural concerns in the project where it would hinder the per
 
 # Overengineering
 
+We are going to be programming on the side of doing the simplest thing that works and errors will be handled accordingly.
+
 # Build-vs-Buy Decisions
 
 We will be using Unity as the framework for creating our game. Unity already comes with a large amount of features (specify) already built into the program, so we will not have to build them from skratch.
