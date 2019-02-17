@@ -9,6 +9,8 @@
 
 ## Vision Statement
 
+The videogame (Hold the Line) is a 2D platformer arcade game. It is designed for gamers who want to play a quick game that does not require a major time investment to fully enjoy. Unlike other videogames within the same genre that offer similar mechanics, our product will differentiate itself by making it much easier to pick up and learn. Providing a quicker learning curve combined with the fast-paced nature of the game will provide a more entertaining experience overall.
+
 For: «gamers»
 Who: «want to play a quick game that does not require a major time investment»
 The: «Hold the Line (working title open to change)»
