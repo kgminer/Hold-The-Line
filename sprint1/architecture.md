@@ -38,7 +38,11 @@ This game will be in English only since it won't be distributed internationally.
 
 # Input/Output
 
+The errors whould handled in the field and we would use a just-in-time reading scheme. 
+
 # Error Processing
+
+Error processing will be corrective and active for incorrect data input before the game starts. When an error is detected, a dialogue box with an error message will pop up to the user to change input. When the game starts, error processing will be detective and the program will propagate errors for incorrect inputs on the controller and/or arrow keys. Exceptions will discard exceptions to keep the game running. Errors will be detected at the point of detection and each class will be resonsible for validating it's own data.
 
 # Fault Tolerance
 
