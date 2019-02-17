@@ -19,12 +19,12 @@ Our product: «makes the features of the game much easier to learn, which provid
 
 # Sprint 1
 
-- Product Backlog
-- Sprint Backlog
+- [Product Backlog](https://github.com/kgminer/Warlords/blob/master/sprint1/product_backlog.md)
+- [Sprint Backlog](https://github.com/kgminer/Warlords/blob/master/sprint1/sprint_backlog)
   - Burndown Chart
-- Requirements
+- [Requirements](https://github.com/kgminer/Warlords/blob/master/sprint1/requirements.md)
 - Design Documents
-  - System Architecture
+  - [System Architecture](https://github.com/kgminer/Warlords/blob/master/sprint1/architecture.md)
   - Class Diagrams
   - Sequence Diagrams
 - Source Code
