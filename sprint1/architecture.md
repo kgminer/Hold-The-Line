@@ -14,7 +14,7 @@ There are no business rules in this project. The project is a game that isn't af
 
 # Resource Management
 
-There are no scarse resources in this project. Therefore, there is no need for resource management.
+There are no scarce resources in this project. Therefore, there is no need for resource management.
 
 # Security
 
