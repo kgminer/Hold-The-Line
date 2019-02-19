@@ -26,3 +26,7 @@
 |            021 |           011 | When the B button is pressed on the controller, this will go to the previous menu screen. | Verified |
 |            022 |           012 | When the game starts, a designated map will be displayed. | Verified |
 |            023 |           013 | After ten minutes has passed in a game, the damage and number of the balls will be increased until one player remains. | Verified |
+|            024 |           014 | When a brick takes damage, it will change color to represent the damage taken. | Verified |
+|            025 |           015 | The player select screen will prompt the user to select how many players are playing. (2-4) | Verified |
+|            026 |           015 | When the amount of players is chosen, a game will begin with the selected amount of players. | Verified |
+|            027 |           016 | When a power up is hit by the ball, the player who hit the ball last receives the power up. | Verified |
