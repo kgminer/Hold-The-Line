@@ -29,4 +29,11 @@
 |            024 |           014 | When a brick takes damage, it will change color to represent the damage taken. | Verified |
 |            025 |           015 | The player select screen will prompt the user to select how many players are playing. (2-4) | Verified |
 |            026 |           015 | When the amount of players is chosen, a game will begin with the selected amount of players. | Verified |
-|            027 |           016 | When a power up is hit by the ball, the player who hit the ball last receives the power up. | Verified |
+|            027 |           016 | When this power up is hit by a ball, the player who last touched this ball will get a bigger paddle for 15 seconds. | Verified |
+|            028 |           017 | When this power up is hit by a ball, the player who last touched this ball will get a smaller paddle for 15 seconds. | Verified |
+|            029 |           018 | When this power up is hit by a ball, all of the balls in play will move faster. | Verified |
+|            030 |           019 | When this power up is hit by a ball, all of the balls in play will move slower. | Verified |
+|            031 |           020 | When this power up is hit by a ball, this ball will do two points of damage to the next brick it hits. | Verified |
+|            032 |           021 | When this power up is hit by a ball, the player who last touched this ball will invert the controls of all their opponents. (Left will move the paddle right, right will move the paddle left). | Verified |
+|            033 |           022 | When this power up is hit by a ball, the player who last touched this ball will have a shield deployed in front of their bricks. | Verified |
+|            034 |           022 | When the shield is hit two times by a projectile, it will dissappear. | Verified |
