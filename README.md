@@ -1,4 +1,4 @@
-# Warlords Project for COP 4331 - Spring 2018
+# Hold The Line Project for COP 4331 - Spring 2018
 
 ## Team Members
 
@@ -9,8 +9,7 @@
 
 ## Vision Statement
 
-The videogame Hold the Line is a 2D platformer arcade game. It is designed for gamers who want to play a quick game that does not require a major time investment to fully enjoy. Unlike other videogames within the same genre that offer similar mechanics, our product will differentiate itself by making it much easier to pick up and learn. Providing a quicker learning curve combined with the fast-paced nature of the game will provide a more entertaining experience overall.
-
+The video game Hold the Line is a 2D competitive arcade game. It is designed for gamers who want to play a quick game that does not require a major time investment to fully enjoy. Unlike other videogames within the same genre that offer similar mechanics, our product will differentiate itself by making it much easier to pick up and learn. Unlike the game Warlords our game will providing a quicker learning curve combined with the fast-paced nature of the game in order to deliver a more entertaining experience overall.
 # Sprint 1
 
 - [Product Backlog](https://github.com/kgminer/Warlords/blob/master/sprint1/product_backlog.md)
