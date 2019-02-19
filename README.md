@@ -20,8 +20,8 @@ The video game Hold the Line is a 2D competitive arcade game. It is designed for
   - [System Architecture](https://github.com/kgminer/Warlords/blob/master/sprint1/architecture.md)
   - [Class Diagrams](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Class%20Diagram.png)
   - [Sequence Diagrams](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Sequence%20Diagram.PNG)
-- Source Code
+- [Source Code](https://github.com/kgminer/Hold-The-Line/tree/master/Hold%20The%20Line)
 - Test Cases
   - Automated Tests
   - [Manual Tests](https://docs.google.com/document/d/154xEoK8J_vCtzeEK2uVsxYIZLYIgcbiLwa-_4h9i0bg/edit)
-- Product Demonstration
+- [Product Demonstration](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/product_demonstration.md)
