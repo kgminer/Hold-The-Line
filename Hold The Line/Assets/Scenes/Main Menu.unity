@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 72068206}
   - component: {fileID: 72068205}
   - component: {fileID: 72068204}
+  - component: {fileID: 72068207}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -213,6 +214,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72068202}
   m_CullTransparentMesh: 0
+--- !u!114 &72068207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72068202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e28b76b38c49d40ae365b447ad7cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 261224898}
+  selectedObject: {fileID: 2044884250}
 --- !u!1 &129865842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1465,7 @@ GameObject:
   - component: {fileID: 1068991783}
   - component: {fileID: 1068991782}
   - component: {fileID: 1068991781}
+  - component: {fileID: 1068991784}
   m_Layer: 5
   m_Name: PlayerSelectPanel
   m_TagString: Untagged
@@ -1540,6 +1556,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068991779}
   m_CullTransparentMesh: 0
+--- !u!114 &1068991784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068991779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e28b76b38c49d40ae365b447ad7cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 261224898}
+  selectedObject: {fileID: 639360740}
 --- !u!1 &1083588612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,29 +1648,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1083588615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1068991779}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1913076601}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1083588615
@@ -2374,6 +2382,7 @@ GameObject:
   - component: {fileID: 1913076605}
   - component: {fileID: 1913076604}
   - component: {fileID: 1913076603}
+  - component: {fileID: 1913076606}
   m_Layer: 5
   m_Name: HelpPanel
   m_TagString: Untagged
@@ -2462,6 +2471,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913076601}
   m_CullTransparentMesh: 0
+--- !u!114 &1913076606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913076601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e28b76b38c49d40ae365b447ad7cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 261224898}
+  selectedObject: {fileID: 1653012798}
 --- !u!1 &2044884250
 GameObject:
   m_ObjectHideFlags: 0
