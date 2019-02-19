@@ -54,7 +54,7 @@ If any projectiles or paddles were to go out of the arena, then these items are 
 
 # Architectural Feasibility
 
-There are no architectural concerns in the project where it would hinder the performance requirements. 
+There are no architectural concerns in the project where it would hinder the performance requirements. This game is already a simpler version of more complex games with the same premise that work fine. Therefore, the game shouldn't run into any architectural feasibility issues.
 
 # Overengineering
 
