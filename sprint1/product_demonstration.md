@@ -1,0 +1,3 @@
+We were able to accomplish all of our user stories in our sprint backlog except the story that discussed having a graphical representation of the game implemented. While we had graphics for our menus that we developed, this was not enough to fully meet the validation criteria of the user story. In addition to the menu graphics, we need to implement the graphics for the rest of the game in order to fully meet the validation criteria that has been outlined. We already are looking at multiple asset packs to use for the actual gameplay, and will focus on making a final decision and implementing the chosen graphics during the next sprint.
+
+Click [here](https://www.youtube.com/watch?v=C6BMX6YuWHs) to view our video demoing our progress so far.
