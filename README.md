@@ -20,7 +20,7 @@ The videogame Hold the Line is a 2D platformer arcade game. It is designed for g
 - Design Documents
   - [System Architecture](https://github.com/kgminer/Warlords/blob/master/sprint1/architecture.md)
   - Class Diagrams
-  - Sequence Diagrams
+  - [Sequence Diagrams](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Sequence%20Diagram.PNG)
 - Source Code
 - Test Cases
 - Product Demonstration
