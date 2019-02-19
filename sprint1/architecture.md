@@ -15,6 +15,14 @@ At the moment, we don't know how we are going to store current states of objects
 There are no business rules in this project. The project is a game that isn't affected by external rules. 
 
 # User Interface Design
+Main Menu:
+![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Main%20Menu.png "Main Menu")
+Player Select:
+![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Player%20Select.png "Player Select Screen")
+Help:
+![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Help%20Screen.png "Help Screen")
+Gameplay: Pause menu will only show up when a player hits the pause button.
+![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Game%20Screen.png "Gameplay Screen")
 
 # Resource Management
 
