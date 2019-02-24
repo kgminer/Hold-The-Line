@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paddle : MonoBehaviour
+public class Paddle4 : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody playerBody;
     [SerializeField]
     private int speed;
     [SerializeField]
@@ -13,22 +11,22 @@ public class Paddle : MonoBehaviour
     [SerializeField]
     private Transform centerPoint;
     private Vector3 inputVector;
-    string playerOneInput = "Horizontal";
+    string playerInput = "Player4";
+    
     // Start is called before the first frame update
     void Start()
     {
-        playerBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        inputVector = new Vector3(Input.GetAxis(playerOneInput), 0, 0);
-        if (GetRelativePaddlePositionX() <= 1 && inputVector.x < 0)
+        inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
+        if (GetRelativePaddlePositionX() >= -1 && inputVector.x > 0)
         {
             inputVector.x = 0;
         }
-        else if (GetRelativePaddlePositionZ() <= 1 && inputVector.x > 0)
+        else if (GetRelativePaddlePositionZ() <= 1 && inputVector.x < 0)
         {
             inputVector.x = 0;
         }
