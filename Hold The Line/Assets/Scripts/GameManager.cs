@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject PausePanel;
-    public GameObject GameOverPanel;
+    public HUD HUD;
 
-    private bool isPaused = false;
     private int activePlayers = 0;
 
     // Start is called before the first frame update
@@ -21,14 +19,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            HUD.OpenPausePanel();
         }
 
         /*
@@ -36,29 +27,9 @@ public class GameManager : MonoBehaviour
 
         if (activePlayers == 1)
         {
-            GameOver();
+            HUD.OpenGameOverPanel();
         }
         */
-    }
-
-    public void ResumeGame()
-    {
-        isPaused = false;
-        PausePanel.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
-    void PauseGame()
-    {
-        isPaused = true;
-        PausePanel.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    void GameOver()
-    {
-        Time.timeScale = 0f;
-        GameOverPanel.SetActive(true);
     }
 
     // TODO

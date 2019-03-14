@@ -2110,6 +2110,7 @@ GameObject:
   - component: {fileID: 872509288}
   - component: {fileID: 872509287}
   - component: {fileID: 872509286}
+  - component: {fileID: 872509290}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -2203,6 +2204,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &872509290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872509285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72537a2f7d2ff7c4e87531ead211429c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PausePanel: {fileID: 1167287562}
+  GameOverPanel: {fileID: 52898338}
 --- !u!1 &899264751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,8 +2715,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1574233259}
-        m_MethodName: ResumeGame
+      - m_Target: {fileID: 872509290}
+        m_MethodName: ClosePausePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3887,8 +3902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a63afdc0599e304f8df1ec711b7d33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PausePanel: {fileID: 1167287562}
-  GameOverPanel: {fileID: 52898338}
+  HUD: {fileID: 872509290}
 --- !u!4 &1574233260
 Transform:
   m_ObjectHideFlags: 0
