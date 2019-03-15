@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public HUD HUD;
 
-    private static int activePlayers;
+    public static int activePlayers;
 
     // Start is called before the first frame update
     void Start()

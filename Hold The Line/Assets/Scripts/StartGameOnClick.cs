@@ -10,4 +10,8 @@ public class StartGameOnClick : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
     
+    public void SetNumberOfPlayers(int players)
+    {
+        GameManager.activePlayers = players;
+    }
 }
