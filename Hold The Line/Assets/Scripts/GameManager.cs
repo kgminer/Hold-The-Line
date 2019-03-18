@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject BottomRightBase;
 
     public static int activePlayers;
+    public static int state;
+    public const int RUNNING = 1, PAUSE = 2, GAME_OVER = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -37,14 +39,31 @@ public class GameManager : MonoBehaviour
                 break;
         }
         Time.timeScale = 1f;
+        GameManager.state = RUNNING;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Start"))
+        switch (GameManager.state)
         {
-            HUD.OpenPausePanel();
+            case RUNNING:
+                if (Input.GetButtonDown("Start"))
+                {
+                    HUD.OpenPausePanel();
+                    GameManager.state = PAUSE;
+                }
+                if (activePlayers == 1)
+                {
+                    GameManager.state = GAME_OVER;
+                }
+                break;
+            case PAUSE:
+                HUD.OpenPausePanel();
+                break;
+            case GAME_OVER:
+                HUD.OpenGameOverPanel();
+                break;
         }
 
         /*

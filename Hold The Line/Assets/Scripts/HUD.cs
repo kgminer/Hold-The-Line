@@ -29,6 +29,7 @@ public class HUD : MonoBehaviour
     {
         PausePanel.SetActive(false);
         Time.timeScale = 1f;
+        GameManager.state = GameManager.RUNNING;
     }
 
     public void OpenGameOverPanel()
