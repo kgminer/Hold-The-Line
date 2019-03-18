@@ -18,17 +18,13 @@ public class GameManager : MonoBehaviour
         switch (activePlayers)
         {
             case 2:
-                // Player2.setActive(false);
                 TopRightBase.SetActive(false);
-                // Player3.setActive(false);
                 BottomLeftBase.SetActive(false);
-                // Change player4 display name to player2
                 HUD.SetBottomRightLabelText("Player 2");
                 HUD.SetTopRightLabelText("");
                 HUD.SetBottomLeftLabelText("");
                 break;
             case 3:
-                // Player4.setActive(false);
                 BottomRightBase.SetActive(false);
                 HUD.SetBottomRightLabelText("");
                 break;
