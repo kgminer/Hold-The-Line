@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44129848, g: 0.4901014, b: 0.5701535, a: 1}
+  m_IndirectSpecularColor: {r: 0.44129843, g: 0.49010116, b: 0.5701529, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -129,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &19710673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1794,7 +1794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &502819963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5676,8 +5676,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Defend your home from your surrounding neighbors. You can do so by knocking
-    boulders into their walls. Once they have an opening simply slip a ball past their
-    defenses to eliminate them. THe last house standing wins!
+    boulders into their walls. Once they have an opening simply slip a boulder past
+    their defenses to eliminate them. The last house standing wins!
 --- !u!222 &1763859601
 CanvasRenderer:
   m_ObjectHideFlags: 0
