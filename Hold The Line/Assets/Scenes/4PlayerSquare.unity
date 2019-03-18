@@ -5215,6 +5215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HUD: {fileID: 872509290}
+  TopLeftBase: {fileID: 1069044428}
+  BottomLeftBase: {fileID: 1955500321}
+  TopRightBase: {fileID: 1486870127}
+  BottomRightBase: {fileID: 1808535091}
 --- !u!4 &1574233260
 Transform:
   m_ObjectHideFlags: 0
@@ -5953,7 +5957,7 @@ Transform:
   - {fileID: 1078088317}
   - {fileID: 1415903546}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826574093
 GameObject:
@@ -6369,7 +6373,7 @@ Transform:
   - {fileID: 925300288}
   - {fileID: 1994525127}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1962065216
 GameObject:

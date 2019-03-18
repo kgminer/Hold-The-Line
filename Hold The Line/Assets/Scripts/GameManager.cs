@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public HUD HUD;
+    public GameObject TopLeftBase;
+    public GameObject BottomLeftBase;
+    public GameObject TopRightBase;
+    public GameObject BottomRightBase;
 
     public static int activePlayers;
 
@@ -15,15 +19,25 @@ public class GameManager : MonoBehaviour
         {
             case 2:
                 // Player2.setActive(false);
+                TopRightBase.SetActive(false);
                 // Player3.setActive(false);
+                BottomLeftBase.SetActive(false);
                 // Change player4 display name to player2
+                HUD.SetBottomRightLabelText("Player 2");
+                HUD.SetTopRightLabelText("");
+                HUD.SetBottomLeftLabelText("");
                 break;
             case 3:
                 // Player4.setActive(false);
+                BottomRightBase.SetActive(false);
+                HUD.SetBottomRightLabelText("");
                 break;
 
+            case 4:
+                //Keep all 4 players
+                break;
             default:
-                // Keep all 4 players
+                // an error has occurred because the default case should never be reached in this situation.
                 break;
         }
         Time.timeScale = 1f;
