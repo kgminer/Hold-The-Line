@@ -17,10 +17,29 @@ Architecture Diagram:
 
 There will be multiple scripts for loading the game/ going into the game. Other scripts will be handling collision detection within the map. Significant classes are the player and AI class for the user and filled in bots. Some sort of management class will handle the current game state.
 
-GameManager class: The GameManager class handles the game's state. It keeps track of whether the game is paused, running, or if the game has ended. It is also used to keep track of how many active players there are in the game. When the amount of players is selected in the player select screen, this information
-is relayed back to the GameManager so that it can set the appropriate name for each player and make the correct paddles active or inactive. While the game is running, the GameManager will continuously check how many active players are in the game, and when there is only one player left, the game is considered over 
-and the GameManager will enter the GAME_OVER state and open the HUD's Game Over panel displaying the name of the appropriate winner. When the start button is pressed by any controller, the GameManager will enter the PAUSE state and display the pause screen from the HUD until the Resume button is pressed. The 
-GameManager relates to user stories 5, 7 and 15. It relates to 5 and 7 because it handles both the pause screen and the game over screen. It relates to user story 15 because when the user selects the amount of players from the player select screen, the GameManager will start the game with that many players.
+GameManager class: 
+
+The GameManager class handles the game's state. It keeps track of whether the game is paused, running, or if the game has ended. It is also used to keep track of how many active players there are in the game. When the amount of players is selected in the player select screen, this information is relayed back to the GameManager so that it can set the appropriate name for each player and make the correct paddles active or inactive. While the game is running, the GameManager will continuously check how many active players are in the game, and when there is only one player left, the game is considered over and the GameManager will enter the GAME_OVER state and open the HUD's Game Over panel displaying the name of the appropriate winner. When the start button is pressed by any controller, the GameManager will enter the PAUSE state and display the pause screen from the HUD until the Resume button is pressed. The GameManager relates to user stories 5, 7 and 15. It relates to 5 and 7 because it handles both the pause screen and the game over screen. It relates to user story 15 because when the user selects the amount of players from the player select screen, the GameManager will start the game with that many players.
+
+Paddle Class: 
+
+Implementation of user story 1 and 8.
+Start(): Only runs when the object is created. Determines which player number the paddle is for based on the location of the paddle. Uses GetRelativePaddlePositionX() and GetRelativePaddlePositionY() to determine the paddle’s location relative to the pivot point.
+Update(): Runs once every frame. Reads input from controller to determine which direction and speed to move the paddle. Calls 
+StopPaddleAtWall() to check if the paddle has reached the wall and stop the paddle from moving any farther in that direction. Uses transform.RotateAround from Unity’s built in UnityEngine class to rotate the paddle around a fixed point based on the input from the controller.
+GetRelativePaddlePositionX(): Checks if the paddle is to the left or to the right of the pivot point. Positive is right, negative is left.
+GetRelativePaddlePositionY(): Checks if the paddle is above or below the pivot point. Positive is above, negative is below.
+StopPaddleAtWall(): Checks if the paddle has reached the wall. If it has reached the wall and the controller is trying to move the paddle in that direction, then the speed of the paddle is set to zero. Otherwise this function doesn’t change the speed of the paddle at all.
+
+Ball Class: 
+
+Implementation of user story 6.
+Start(): Only runs when the object is created. Sets the ball to move in a random direction.
+LateUpdate(): Runs once at the end of every frame. Ensures that the ball velocity stays the same. Sets the rotation of the ball.
+BallStartDirectionVector(): Function that randomly sets the direction for the ball to begin moving in. First the function determines the quadrant that it will move towards. Then it will assign a random X and Z velocity component between 0.1 and 1. This was done so that a value of zero could not be chosen, as that would get the ball stuck bouncing between the same two spots indefinitely. The two velocity values are normalized using the Vector3.Normalize() function provided by UnityEngine. The normalized velocity vector is then returned.
+SetRotation(): Sets the ball rotation to be perpendicular to axis of translation. X and Z axes need to be flipped so that rotation is perpendicular to translation rather than rotating around the axis of translation. Z axis of rotation needs to be inverted due to right hand rule.
+
+
 
 # Data Design
 
