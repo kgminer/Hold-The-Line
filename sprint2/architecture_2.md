@@ -2,6 +2,9 @@
 
 The game will start with an interface for interacting with the user by starting the game, leaving the game, help, etc. Once the game has started, the program will be interpreting input commands to play the game. The game will run continuously until the game ending criteria is met. When that criteria is met, the program will interact with the user to either start another game or leave the game.
 
+Architecture Diagram:
+![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Sequence%20Diagram.PNG)
+
 # Major Classes
 
 There will be multiple scripts for loading the game/ going into the game. Other scripts will be handling collision detection within the map. Significant classes are the player and AI class for the user and filled in bots. Some sort of management class will handle the current game state.
