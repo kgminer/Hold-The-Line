@@ -82,8 +82,9 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    WinnerLabel.GetComponent<Text>().text = "No one wins..."
+                    WinnerLabel.GetComponent<Text>().text = "No one wins...";
                 }
+
                 HUD.OpenGameOverPanel();
                 break;
         }
