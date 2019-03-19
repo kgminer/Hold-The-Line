@@ -8,7 +8,7 @@ There will be multiple scripts for loading the game/ going into the game. Other 
 
 # Data Design
 
-At the moment, we don't know how we are going to store current states of objects in the game. However, a method will be established in the near future and this section will be updated.
+Currently, there are no special data designs used. When additional features are added, like power-ups, a data design will likely be used.
 
 # Business Rules
 
