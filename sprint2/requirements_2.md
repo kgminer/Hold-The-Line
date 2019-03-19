@@ -34,3 +34,7 @@
 |            029 |           021 | When this power up is hit by a ball, the player who last touched this ball will invert the controls of all their opponents. (Left will move the paddle right, right will move the paddle left). | Verified |
 |            030 |           022 | When this power up is hit by a ball, the player who last touched this ball will have a shield deployed in front of their bricks. | Verified |
 |            031 |           022 | When the shield is hit two times by a projectile, it will disappear. | Verified |
+|            032 |           023 | When the game starts with this camera mode selected, the camera is directly above the scene pointing down. | Done |
+|            033 |           024 | When the game starts with this camera mode selected, four cameras will be placed behind each paddle facing towards the board. | Verified |
+|            034 |           025 | The main menu will have an options button which goes to the options screen. | Verified |
+|            035 |           025 | The options screen will provide the option to switch between the two available camera angles (Top-down view and first-person view). | Verified |
