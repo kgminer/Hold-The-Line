@@ -1,6 +1,6 @@
 # Program Organization
 
-The game will start with an interface for interacting with the user by starting the game, leaving the game, help, etc. Once the game has started, the program will be interpreting input commands to play the game. The game will run continuously until the game ending criteria is met. When that criteria is met, the program will interact with the user to either start another game or leave the game.
+The game starts with a GUI for playing the game, bringing up the help GUI, and quitting the game. The user will then be able to select the amount of players and start the game with the amount of players selected. Inputs will be read via controllers and the game will run until 1 player is left alive. The help GUI can be accessed during the game.
 
 Architecture Diagram:
 
