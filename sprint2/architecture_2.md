@@ -24,20 +24,20 @@ The GameManager class handles the game's state. It keeps track of whether the ga
 Paddle Class: 
 
 Implementation of user story 1 and 8.
-Start(): Only runs when the object is created. Determines which player number the paddle is for based on the location of the paddle. Uses GetRelativePaddlePositionX() and GetRelativePaddlePositionY() to determine the paddle’s location relative to the pivot point.
-Update(): Runs once every frame. Reads input from controller to determine which direction and speed to move the paddle. Calls 
+Start() Only runs when the object is created. Determines which player number the paddle is for based on the location of the paddle. Uses GetRelativePaddlePositionX() and GetRelativePaddlePositionY() to determine the paddle’s location relative to the pivot point.
+Update() Runs once every frame. Reads input from controller to determine which direction and speed to move the paddle. Calls 
 StopPaddleAtWall() to check if the paddle has reached the wall and stop the paddle from moving any farther in that direction. Uses transform.RotateAround from Unity’s built in UnityEngine class to rotate the paddle around a fixed point based on the input from the controller.
-GetRelativePaddlePositionX(): Checks if the paddle is to the left or to the right of the pivot point. Positive is right, negative is left.
-GetRelativePaddlePositionY(): Checks if the paddle is above or below the pivot point. Positive is above, negative is below.
-StopPaddleAtWall(): Checks if the paddle has reached the wall. If it has reached the wall and the controller is trying to move the paddle in that direction, then the speed of the paddle is set to zero. Otherwise this function doesn’t change the speed of the paddle at all.
+GetRelativePaddlePositionX() Checks if the paddle is to the left or to the right of the pivot point. Positive is right, negative is left.
+GetRelativePaddlePositionY() Checks if the paddle is above or below the pivot point. Positive is above, negative is below.
+StopPaddleAtWall() Checks if the paddle has reached the wall. If it has reached the wall and the controller is trying to move the paddle in that direction, then the speed of the paddle is set to zero. Otherwise this function doesn’t change the speed of the paddle at all.
 
 Ball Class: 
 
 Implementation of user story 6.
-Start(): Only runs when the object is created. Sets the ball to move in a random direction.
-LateUpdate(): Runs once at the end of every frame. Ensures that the ball velocity stays the same. Sets the rotation of the ball.
-BallStartDirectionVector(): Function that randomly sets the direction for the ball to begin moving in. First the function determines the quadrant that it will move towards. Then it will assign a random X and Z velocity component between 0.1 and 1. This was done so that a value of zero could not be chosen, as that would get the ball stuck bouncing between the same two spots indefinitely. The two velocity values are normalized using the Vector3.Normalize() function provided by UnityEngine. The normalized velocity vector is then returned.
-SetRotation(): Sets the ball rotation to be perpendicular to axis of translation. X and Z axes need to be flipped so that rotation is perpendicular to translation rather than rotating around the axis of translation. Z axis of rotation needs to be inverted due to right hand rule.
+Start() Only runs when the object is created. Sets the ball to move in a random direction.
+LateUpdate() Runs once at the end of every frame. Ensures that the ball velocity stays the same. Sets the rotation of the ball.
+BallStartDirectionVector() Function that randomly sets the direction for the ball to begin moving in. First the function determines the quadrant that it will move towards. Then it will assign a random X and Z velocity component between 0.1 and 1. This was done so that a value of zero could not be chosen, as that would get the ball stuck bouncing between the same two spots indefinitely. The two velocity values are normalized using the Vector3.Normalize() function provided by UnityEngine. The normalized velocity vector is then returned.
+SetRotation() Sets the ball rotation to be perpendicular to axis of translation. X and Z axes need to be flipped so that rotation is perpendicular to translation rather than rotating around the axis of translation. Z axis of rotation needs to be inverted due to right hand rule.
 
 
 
