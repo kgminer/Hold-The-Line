@@ -17,6 +17,11 @@ Architecture Diagram:
 
 There will be multiple scripts for loading the game/ going into the game. Other scripts will be handling collision detection within the map. Significant classes are the player and AI class for the user and filled in bots. Some sort of management class will handle the current game state.
 
+GameManager class: The GameManager class handles the game's state. It keeps track of whether the game is paused, running, or if the game has ended. It is also used to keep track of how many active players there are in the game. When the amount of players is selected in the player select screen, this information
+is relayed back to the GameManager so that it can set the appropriate name for each player and make the correct paddles active or inactive. While the game is running, the GameManager will continuously check how many active players are in the game, and when there is only one player left, the game is considered over 
+and the GameManager will enter the GAME_OVER state and open the HUD's Game Over panel displaying the name of the appropriate winner. When the start button is pressed by any controller, the GameManager will enter the PAUSE state and display the pause screen from the HUD until the Resume button is pressed. The 
+GameManager relates to user stories 5, 7 and 15. It relates to 5 and 7 because it handles both the pause screen and the game over screen. It relates to user story 15 because when the user selects the amount of players from the player select screen, the GameManager will start the game with that many players.
+
 # Data Design
 
 Currently, there are no special data designs used. When additional features are added, like power-ups, a data design will likely be used.
