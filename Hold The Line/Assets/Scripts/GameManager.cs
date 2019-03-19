@@ -65,29 +65,5 @@ public class GameManager : MonoBehaviour
                 HUD.OpenGameOverPanel();
                 break;
         }
-
-        /*
-        activePlayers = checkActivePlayers();
-
-        if (activePlayers == 1)
-        {
-            HUD.OpenGameOverPanel();
-        }
-        */
     }
-
-    // TODO
-    // Until we have some way to check if a player has been eliminated.
-    /*
-    private int checkActivePlayers()
-    {
-        int result = 0;
-
-        for (all players)
-            if (player is alive)
-                result++;
-
-        return result;
-    }
-    */
 }
