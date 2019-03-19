@@ -66,19 +66,19 @@ public class GameManager : MonoBehaviour
             case GAME_OVER:
                 if (TopLeftBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getTopLeftLabelText();
+                    WinnerLabel.GetComponent<Text>().text = HUD.getTopLeftLabelText() + " Wins!";
                 }
                 else if (TopRightBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getTopRightLabelText();
+                    WinnerLabel.GetComponent<Text>().text = HUD.getTopRightLabelText() + " Wins!";
                 }
                 else if (BottomLeftBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomLeftLabelText();
+                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomLeftLabelText() + " Wins!";
                 }
                 else if (BottomRightBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomRightLabelText();
+                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomRightLabelText() + " Wins!";
                 }
                 else
                 {
