@@ -5269,6 +5269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HUD: {fileID: 872509290}
+  WinnerLabel: {fileID: 1239871746}
   TopLeftBase: {fileID: 1069044428}
   BottomLeftBase: {fileID: 1955500321}
   TopRightBase: {fileID: 1486870127}
