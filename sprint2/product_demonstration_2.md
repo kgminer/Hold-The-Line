@@ -1,1 +1,3 @@
+This sprint went much better than the last sprint. We were able to complete all of the user stories that we included in out sprint backlog. This included the graphical representation of the game that we weren't able to complete in the previous sprint. The ending result of the sprint was a playable game that contains the core functionalities of the game. We hope to capitalize off of this sprint to implement the features of the game that were not essential to the game, but would provide a beneficial improvement to the enjoyment of the game.
 
+Click [here](https://www.youtube.com/watch?v=LkXBtR9m8oM) to view our video demoing our progress so far.
