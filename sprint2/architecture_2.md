@@ -15,7 +15,7 @@ Architecture Diagram:
 
 # Major Classes
 
-There will be multiple scripts for loading the game/ going into the game. Other scripts will be handling collision detection within the map. Significant classes are the player and AI class for the user and filled in bots. Some sort of management class will handle the current game state.
+The Class Diagram can be found by clicking the link [here](https://drive.google.com/file/d/1nTNHmBsXDmiHwgTFE3tG03V_o0zKW2fb/view?usp=sharing).
 
 GameManager class: 
 
@@ -39,6 +39,21 @@ LateUpdate() runs once at the end of every frame. Ensures that the ball velocity
 BallStartDirectionVector() function that randomly sets the direction for the ball to begin moving in. First the function determines the quadrant that it will move towards. Then it will assign a random X and Z velocity component between 0.1 and 1. This was done so that a value of zero could not be chosen, as that would get the ball stuck bouncing between the same two spots indefinitely. The two velocity values are normalized using the Vector3.Normalize() function provided by UnityEngine. The normalized velocity vector is then returned.
 SetRotation() sets the ball rotation to be perpendicular to axis of translation. X and Z axes need to be flipped so that rotation is perpendicular to translation rather than rotating around the axis of translation. Z axis of rotation needs to be inverted due to right hand rule.
 
+HUD Class:
+
+This class is responsible for managing the various menus that appear during the actual game. This includes the Pause menu from user story 5, which has the Help menu from user story 3 contained in it, the Game Over menu from user story 7. In addition the HUD is responsible for displaying the labels that show the players which part of the screen they are located on which relates to user story 15. Get and Set methods are provided for the GameManager class to use to set up the labels based on how many players there will be at the start of the game.
+
+QuitOnClick Class:
+
+This class is involved with User Stories 4, 5, and 7. All of these menus have a requirement that the game should be able to quit from those menus. This class holds the code that allows the player to quit the game.
+
+SelectOnInput Class:
+
+This class deals with the ability for the player to select buttons on the screen using a controller. Whenever there is input from the controller, the event manager in Unity is told to move the next button in that direction, making it selectable. This plays into the implementation of user stories 9 and 11. This script allows the player to click on buttons that advance the menus to the next screen and also works for clicking on the back buttons to return to the previous screen that the player was at.
+
+StartGameOnClick Class:
+
+This class is responsible for user story 15 which deals with the transition from the main menu to the actual game. The function StartByIndex() is used to to load from one scene to another. Additionally, the function SetNumberOfPlayers() is used to let the GameManager class in the game know how many players are in a match when it starts.
 
 
 # Data Design
