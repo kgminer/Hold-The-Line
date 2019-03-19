@@ -301,62 +301,62 @@ InputManager:
     positiveButton: right
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
-    dead: 0.001
-    sensitivity: 3
+    gravity: 0
+    dead: 0.2
+    sensitivity: 1
     snap: 1
-    invert: 0
-    type: 0
+    invert: 1
+    type: 2
     axis: 0
-    joyNum: 0
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Player2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: u
-    positiveButton: o
+    negativeButton: left
+    positiveButton: right
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
-    dead: 0.001
-    sensitivity: 3
+    gravity: 0
+    dead: 0.2
+    sensitivity: 1
     snap: 1
-    invert: 0
-    type: 0
+    invert: 1
+    type: 2
     axis: 0
-    joyNum: 0
+    joyNum: 3
   - serializedVersion: 3
     m_Name: Player3
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: j
-    positiveButton: l
+    negativeButton: left
+    positiveButton: right
     altNegativeButton: 
-    altPositiveButton: joystick button 1
-    gravity: 3
-    dead: 0.001
-    sensitivity: 3
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.2
+    sensitivity: 1
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 0
-    joyNum: 0
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Player4
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: m
-    positiveButton: .
+    negativeButton: left
+    positiveButton: right
     altNegativeButton: 
     altPositiveButton: joystick button 1
-    gravity: 3
-    dead: 0.001
-    sensitivity: 3
+    gravity: 0
+    dead: 0.2
+    sensitivity: 1
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 0
-    joyNum: 0
+    joyNum: 6
   - serializedVersion: 3
     m_Name: Start
     descriptiveName: 
