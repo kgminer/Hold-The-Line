@@ -31,11 +31,9 @@ public class Ball : MonoBehaviour
     Vector3 BallStartDirectionVector()
     {
         Vector3 startVelocity;
-        //startVelocity.x = Random.Range(.1f, 1);
-        startVelocity.x = 1;
+        startVelocity.x = Random.Range(.1f, 1);
         startVelocity.y = 0;
-        startVelocity.z = 1;
-        //startVelocity.z = Random.Range(.1f, 1);
+        startVelocity.z = Random.Range(.1f, 1);
         int startQuadrant = 0;
         startQuadrant = Random.Range(0, 4);
         switch (startQuadrant)

@@ -5,16 +5,17 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     [SerializeField]
-    private int speed;
+    private int speed = 30;                     // Changed by unity editor
     [SerializeField]
-    private Transform paddlePosition; 
+    private Transform paddlePosition;           // Set by unity editor
     [SerializeField]
-    private Transform centerPoint;
+    private Transform centerPoint;              // Set by unity editor
     private Vector3 inputVector;
     private int currentPlayer = 0;
     string playerInput = null;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update.
+    // Determines which player number the paddle is for based on the location of the paddle.
     void Start() {
         float xStartPosition = GetRelativePaddlePositionX();
         float yStartPosition = GetRelativePaddlePositionZ();
@@ -43,14 +44,16 @@ public class Paddle : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Reads input from controller to determine which direction and speed to move the paddle. 
     void Update()
     {
         inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
-        stopPaddleAtWall();
+        StopPaddleAtWall();
         transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
 
     }
 
+    // Checks if the paddle is to the left or to the right of the pivot point. Positive is right, negative is left.
     float GetRelativePaddlePositionX()
     {
         float relativePaddlePosition = 0;
@@ -58,6 +61,7 @@ public class Paddle : MonoBehaviour
         return relativePaddlePosition;
     }
 
+    // Checks if the paddle is above or below the pivot point. Positive is above, negative is below.
     float GetRelativePaddlePositionZ()
     {
         float relativePaddlePosition = 0;
@@ -65,7 +69,10 @@ public class Paddle : MonoBehaviour
         return relativePaddlePosition;
     }
 
-    void stopPaddleAtWall()
+    // Checks if the paddle has reached the wall. If it has reached the wall and the
+    // controller is trying to move the paddle in that direction, then the speed of the 
+    // paddle is set to zero. Otherwise this function doesn’t change the speed of the paddle at all.
+    void StopPaddleAtWall()
     {
         switch (currentPlayer)
         {
