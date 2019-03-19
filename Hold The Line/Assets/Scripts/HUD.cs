@@ -57,4 +57,24 @@ public class HUD : MonoBehaviour
     {
         BottomRightLabel.GetComponent<Text>().text = inputText;
     }
+
+    public string getTopLeftLabelText()
+    {
+        return TopLeftLabel.GetComponent<Text>().text;
+    }
+
+    public string getTopRightLabelText()
+    {
+        return TopRightLabel.GetComponent<Text>().text;
+    }
+
+    public string getBottomLeftLabelText()
+    {
+        return BottomLeftLabel.GetComponent<Text>().text;
+    }
+
+    public string getBottomRightLabelText()
+    {
+        return BottomRightLabel.GetComponent<Text>().text;
+    }
 }

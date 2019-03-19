@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public HUD HUD;
+    public GameObject WinnerLabel;
     public GameObject TopLeftBase;
     public GameObject BottomLeftBase;
     public GameObject TopRightBase;
@@ -62,6 +64,26 @@ public class GameManager : MonoBehaviour
                 HUD.OpenPausePanel();
                 break;
             case GAME_OVER:
+                if (TopLeftBase.activeSelf)
+                {
+                    WinnerLabel.GetComponent<Text>().text = HUD.getTopLeftLabelText();
+                }
+                else if (TopRightBase.activeSelf)
+                {
+                    WinnerLabel.GetComponent<Text>().text = HUD.getTopRightLabelText();
+                }
+                else if (BottomLeftBase.activeSelf)
+                {
+                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomLeftLabelText();
+                }
+                else if (BottomRightBase.activeSelf)
+                {
+                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomRightLabelText();
+                }
+                else
+                {
+                    WinnerLabel.GetComponent<Text>().text = "No one wins..."
+                }
                 HUD.OpenGameOverPanel();
                 break;
         }
