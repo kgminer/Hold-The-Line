@@ -53,8 +53,15 @@ This class deals with the ability for the player to select buttons on the screen
 
 StartGameOnClick Class:
 
-This class is responsible for user story 15 which deals with the transition from the main menu to the actual game. The function StartByIndex() is used to to load from one scene to another. Additionally, the function SetNumberOfPlayers() is used to let the GameManager class in the game know how many players are in a match when it starts.
+This class is responsible for user story 15 which deals with the transition from the main menu to the actual game. The function StartByIndex() is used to load from one scene to another. Additionally, the function SetNumberOfPlayers() is used to let the GameManager class in the game know how many players are in a match when it starts.
 
+Defense Class:
+
+This class handles the color change of the blocks to visualize the damage taken by the ball. This is done with a counter that keeps track of how many times the ball has made contact with the block inside the OnTriggerEnter() function and change the material color accordingly. After 4 collisions, the block will destroy itself in the function Uptade(). These tie in to user story 14 as it requested a way to visualize damage taken and to disappear after a certain amount of damage is taken.
+
+Base Class:
+
+This class causes the players base to disappear if the ball makes contact with it. That way a player can be eliminated. This was implemented for user story 12, which allows the user(s) to see the current state of each players base. 
 
 # Data Design
 
