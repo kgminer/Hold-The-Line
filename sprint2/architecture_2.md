@@ -58,7 +58,7 @@ This class is responsible for user story 15 which deals with the transition from
 
 # Data Design
 
-Currently, there are no special data designs used. When additional features are added, like power-ups, a data design will likely be used.
+Currently our game implements a number of free assets that were obtained from the Unity Asset Store and from a free font generation site. The assets obtained from the Unity Store were boulder models that we are using as the ball for our game, and a set of wooden UI elements that we are using for our buttons and panels. All of these assets are contained under the Asset file of our project.
 
 # Business Rules
 
