@@ -65,13 +65,19 @@ Currently, there are no special data designs used. When additional features are 
 There are no business rules in this project. The project is a game that isn't affected by external rules. 
 
 # User Interface Design
+The entirety of the user interface deals with user story 12. The completion of all these interfaces yields a complete representation of the game during its different phases. In addition just about every user interface deals with user stories 9 and 11. All of the menus at some point have to deal with the player being able to move from item to item, selecting those items, and going back to previous screens. The details of the individuals interfaces are broken down below.
+
 Main Menu:
+Users will interact with the main menu by using the joystick on the controller to navigate around to the different parts of the screen that they want to go to and then using the A button on the controller to select that item. This menu deals with user story 4, as it provides the main menu for the game to start at.
 ![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Main%20Menu.png "Main Menu")
 Player Select:
+The Player Select menu is responsible for starting the game based on how many players there will be which takes care of user story 15. The player will interact with the Player Select menu in the same way that they interact with the main menu.
 ![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Player%20Select.png "Player Select Screen")
 Help:
+The Help menu deals with user story 3 in that it displays the information to help the player learn the game. Once again, interactions are the same as the previous menus, using the joystick to move around to the button of choice and then hitting A to select that button.
 ![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Help%20Screen.png "Help Screen")
-Gameplay: Pause menu will only show up when a player hits the pause button.
+Gameplay: Pause menu will only show up when a player hits the pause button. 7, 14
+The Gameplay interface is the first part of the program where the user interacts with it in a different way than the other interfaces. Now each player will be tied to a base where they carry out user stories 1 and 8 which deals with moving the paddle to block projectiles that come towards their base. The game is loaded in at a top-down view which applies to user story 23. At any time during the game, the player can hit the pause button on their controller to enter into the pause screen as discussed in user story 5. While on the pause screen, interaction with the game returns to method that is used with all other interfaces. During the gameplay, the state of the walls are updated as they take damage through the code used in user story 14. This continues until there is one player remaining. This cause the game over message of user story 7 to be displayed. From here the user can choose to either quit the game or go back to the main menu to start the game over again.
 ![alt text](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Hold%20The%20Line%20Game%20Screen.png "Gameplay Screen")
 
 # Resource Management
