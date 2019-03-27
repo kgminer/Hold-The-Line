@@ -27,3 +27,6 @@
 |023| As a player, I want to have a top-down view of the game, so I can see the full board of the game.|1|1| When a match is started, the camera looks down at the map.|Done|
 |024| As a player, I want to have a split-screen view fo the game, so that I can play the game from a behind the paddle camera angle.|2|9| When a match is started, four panels appear that show a behind the shoulder camera view.|Verified|
 |025| As a player, I want to be able to change the camera view that the game is played with.|4|9| The player will be able to switch back and forth between the two camera views in an options menu.|Verified|
+|026| As a player, I want a sound effect to play whenever I select something on a menu.|4|3| Whenever a button is selected on a menu, a sound effect is played.|Verified|
+|027| As a player, I want a sound effect to play whenever a ball hits something.|6|3| A sound effect plays when a ball hits a wall, a paddle, or a defense.|Verified|
+|028| As a player, I want there to be background music that plays while the game is being played.|5|3| Whenever a game starts, a background track plays during the gameplay.|Verified|
