@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     Rigidbody ball;
     static readonly int NUMBER_OF_SECONDS_IN_MINUTE = 60;
     static readonly float BALL_RADIUS = 0.75f;
+    private int lastPaddleHit = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,11 @@ public class Ball : MonoBehaviour
         ball.velocity = BallStartDirectionVector() * speed;
     }
 
+    // Called at the start of every frame
+    private void Update()
+    {
+        
+    }
     // Ensures that the ball is moving with a constant velocity and rotation.
     // These can be set in either order.
     private void LateUpdate()
@@ -71,5 +77,28 @@ public class Ball : MonoBehaviour
         rotation.x = rotation.z;
         rotation.z = -tempRotationX;
         transform.Rotate(rotation, Space.World);
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Player1":
+                lastPaddleHit = 1;
+                break;
+            case "Player2":
+                lastPaddleHit = 2;
+                break;
+            case "Player3":
+                lastPaddleHit = 3;
+                break;
+            case "Player4":
+                lastPaddleHit = 4;
+                break;
+            default:
+                break;
+        }
+        Debug.Log("Last paddle hit = " + lastPaddleHit);
+        
     }
 }

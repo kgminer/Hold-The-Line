@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SpawnObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    public Object powerupBlock;
+    [SerializeField]
+    public Transform spawnLocation;
+    private 
+    void SpawnNewPowerup()
     {
-        
+        Instantiate(powerupBlock, spawnLocation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
