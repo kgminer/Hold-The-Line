@@ -21,8 +21,10 @@ public class SpawnObject : MonoBehaviour
     void SpawnNewPowerup()
     {
         spawnLocation.x = Random.Range(-spawnRange, spawnRange);
+        spawnLocation.y = 0.64f;
         spawnLocation.z = Random.Range(-spawnRange, spawnRange);
         Instantiate(powerupBlock, spawnLocation, Quaternion.identity);
     }
 
 }
+
