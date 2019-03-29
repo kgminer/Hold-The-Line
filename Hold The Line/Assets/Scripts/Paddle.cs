@@ -7,11 +7,13 @@ public class Paddle : MonoBehaviour
     [SerializeField]
     private int speed = 30;                     // Changed by unity editor
     [SerializeField]
-    private Transform paddlePosition;           // Set by unity editor
+    private Transform paddle;           // Set by unity editor
     [SerializeField]
     private Transform centerPoint;              // Set by unity editor
     private Vector3 inputVector;
     private int currentPlayer = 0;
+    [SerializeField]
+    private int powerupTimer = 10;
     string playerInput = null;
 
     // Start is called before the first frame update.
@@ -57,7 +59,7 @@ public class Paddle : MonoBehaviour
     float GetRelativePaddlePositionX()
     {
         float relativePaddlePosition = 0;
-        relativePaddlePosition = paddlePosition.position.x - centerPoint.position.x;
+        relativePaddlePosition = paddle.position.x - centerPoint.position.x;
         return relativePaddlePosition;
     }
 
@@ -65,7 +67,7 @@ public class Paddle : MonoBehaviour
     float GetRelativePaddlePositionZ()
     {
         float relativePaddlePosition = 0;
-        relativePaddlePosition = paddlePosition.position.z - centerPoint.position.z;
+        relativePaddlePosition = paddle.position.z - centerPoint.position.z;
         return relativePaddlePosition;
     }
 
@@ -124,5 +126,14 @@ public class Paddle : MonoBehaviour
                 print("Invalid Player Selection");
                 break;
         }
+    }
+    public void EnlargePaddle()
+    {
+        paddle.gameObject.transform.localScale = new Vector3(4, 0.25f, 1);
+        Invoke("ResetPaddle", powerupTimer);
+    }
+    public void ResetPaddle()
+    {
+        paddle.gameObject.transform.localScale = new Vector3(2, 0.25f, 1);
     }
 }
