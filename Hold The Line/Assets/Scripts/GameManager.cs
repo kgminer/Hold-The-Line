@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public HUD HUD;
+    public Ball Ball;
     public GameObject WinnerLabel;
     public GameObject TopLeftBase;
     public GameObject BottomLeftBase;
@@ -19,6 +20,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Increases the difficulty every 45 seconds.
+        InvokeRepeating("IncreaseDiffictulty", 45.0f, 45.0f);
+
+        // Begins sudden death mode after 10 minutes.
+        Invoke("SuddenDeath", 600.0f);
+
+        // Enables the correct amount of players according to what the user has chosen.
         switch (activePlayers)
         {
             case 2:
@@ -52,7 +60,6 @@ public class GameManager : MonoBehaviour
             case RUNNING:
                 if (Input.GetButtonDown("Start"))
                 {
-                    HUD.OpenPausePanel();
                     GameManager.state = PAUSE;
                 }
                 if (activePlayers == 1)
@@ -88,5 +95,18 @@ public class GameManager : MonoBehaviour
                 HUD.OpenGameOverPanel();
                 break;
         }
+    }
+
+    // Spawns a new ball and increases the speed of all balls every time it is invoked.
+    void IncreaseDifficulty()
+    {
+        Instantiate(Ball, new Vector3(0,0.38f,0), Quaternion.identity);
+        Ball.SetSpeed(Ball.GetSpeed() + 5);
+    }
+
+    // Starts sudden death mode which increases the damage of the balls.
+    void SuddenDeath()
+    {
+
     }
 }

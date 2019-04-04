@@ -73,4 +73,14 @@ public class Ball : MonoBehaviour
         rotation.z = -tempRotationX;
         transform.Rotate(rotation, Space.World);
     }
+
+    public void SetSpeed(float s)
+    {
+        speed = s;
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
 }

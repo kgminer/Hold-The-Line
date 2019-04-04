@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44129834, g: 0.49010146, b: 0.5701535, a: 1}
+  m_IndirectSpecularColor: {r: 0.44129843, g: 0.49010116, b: 0.5701529, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8106,6 +8106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HUD: {fileID: 872509290}
+  Ball: {fileID: 529036851}
   WinnerLabel: {fileID: 1239871746}
   TopLeftBase: {fileID: 1069044428}
   BottomLeftBase: {fileID: 1955500321}
