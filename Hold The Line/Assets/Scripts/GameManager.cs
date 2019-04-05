@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public HUD HUD;
     public Ball Ball;
-    public GameObject WinnerLabel;
+    public SplitScreen splitScreen;
     public GameObject TopLeftBase;
     public GameObject BottomLeftBase;
     public GameObject TopRightBase;
@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
 
     public static int activePlayers;
     public static int state;
+    public static bool topDownCameraMode;
+    private int winningBase, numberOfPlayersAtStart;
     public const int RUNNING = 1, PAUSE = 2, GAME_OVER = 3;
+    public const int NO_WINNER = 0, TOP_LEFT = 1, TOP_RIGHT = 2, BOTTOM_LEFT = 3, BOTTOM_RIGHT = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +35,9 @@ public class GameManager : MonoBehaviour
             case 2:
                 TopRightBase.SetActive(false);
                 BottomLeftBase.SetActive(false);
-                HUD.SetBottomRightLabelText("Player 2");
-                HUD.SetTopRightLabelText("");
-                HUD.SetBottomLeftLabelText("");
                 break;
             case 3:
                 BottomRightBase.SetActive(false);
-                HUD.SetBottomRightLabelText("");
                 break;
 
             case 4:
@@ -48,8 +47,22 @@ public class GameManager : MonoBehaviour
                 // an error has occurred because the default case should never be reached in this situation.
                 break;
         }
+
+        HUD.ConfigureUILabels();
+
+        //Configures cameras based on which camera setting is selected
+        if(topDownCameraMode)
+        {
+            splitScreen.ConfigureTopDown();
+        }
+        else
+        {
+            splitScreen.ConfigureSplitScreen();
+        }
+
         Time.timeScale = 1f;
         GameManager.state = RUNNING;
+        numberOfPlayersAtStart = GameManager.activePlayers;
     }
 
     // Update is called once per frame
@@ -73,25 +86,25 @@ public class GameManager : MonoBehaviour
             case GAME_OVER:
                 if (TopLeftBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getTopLeftLabelText() + " Wins!";
+                    winningBase = TOP_LEFT;
                 }
                 else if (TopRightBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getTopRightLabelText() + " Wins!";
+                    winningBase = TOP_RIGHT;
                 }
                 else if (BottomLeftBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomLeftLabelText() + " Wins!";
+                    winningBase = BOTTOM_LEFT;
                 }
                 else if (BottomRightBase.activeSelf)
                 {
-                    WinnerLabel.GetComponent<Text>().text = HUD.getBottomRightLabelText() + " Wins!";
+                    winningBase = BOTTOM_RIGHT;
                 }
                 else
                 {
-                    WinnerLabel.GetComponent<Text>().text = "No one wins...";
+                    winningBase = NO_WINNER;
                 }
-
+                HUD.ConfigureWinnerLabel(winningBase, numberOfPlayersAtStart);
                 HUD.OpenGameOverPanel();
                 break;
         }

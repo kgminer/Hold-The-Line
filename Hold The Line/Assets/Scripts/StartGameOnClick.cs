@@ -13,6 +13,5 @@ public class StartGameOnClick : MonoBehaviour
     public void SetNumberOfPlayers(int players)
     {
         GameManager.activePlayers = players;
-        SplitScreen.SetFourPlayer(true);
     }
 }

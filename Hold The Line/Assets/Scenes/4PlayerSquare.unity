@@ -5220,6 +5220,7 @@ MonoBehaviour:
   BottomLeftLabel: {fileID: 377688656}
   TopRightLabel: {fileID: 34982861}
   BottomRightLabel: {fileID: 2002537446}
+  WinnerLabel: {fileID: 1239871746}
 --- !u!4 &889009441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 421974, guid: 95f5524a950978c45a78becde27e894a,
@@ -8107,7 +8108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 872509290}
   Ball: {fileID: 529036851}
-  WinnerLabel: {fileID: 1239871746}
+  splitScreen: {fileID: 1676491026}
   TopLeftBase: {fileID: 1069044428}
   BottomLeftBase: {fileID: 1955500321}
   TopRightBase: {fileID: 1486870127}
@@ -8524,6 +8525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf660f7f8ff3de9489dde20e134d5817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  topDownCamera: {fileID: 534669904}
   topLeftCamera: {fileID: 49634898}
   topRightCamera: {fileID: 1483238175}
   bottomLeftCamera: {fileID: 1774794922}

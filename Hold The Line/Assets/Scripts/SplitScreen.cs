@@ -5,7 +5,7 @@ using UnityEngine;
 public class SplitScreen : MonoBehaviour
 {
     [SerializeField]
-    static bool fourPlayer = false;
+    private Camera topDownCamera;
     [SerializeField]
     private Camera topLeftCamera;
     [SerializeField]
@@ -15,24 +15,58 @@ public class SplitScreen : MonoBehaviour
     [SerializeField]
     private Camera bottomRightCamera;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ConfigureTopDown()
     {
-        if (fourPlayer == true)
-        {
-            topLeftCamera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
-            topRightCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
-            bottomLeftCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
-            bottomRightCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
-        }
-
+        topDownCamera.gameObject.SetActive(true);
+        topLeftCamera.gameObject.SetActive(false);
+        topRightCamera.gameObject.SetActive(false);
+        bottomLeftCamera.gameObject.SetActive(false);
+        bottomRightCamera.gameObject.SetActive(false);
     }
 
-    public static void SetFourPlayer(bool fourPlayerState)
+    public void ConfigureSplitScreen()
     {
-        if (fourPlayerState == true)
+        topDownCamera.gameObject.SetActive(false);
+
+        switch (GameManager.activePlayers)
         {
-            fourPlayer = true;
+            case 2:
+                SetTwoPlayer();
+                break;
+            case 3:
+                SetThreePlayer();
+                break;
+
+            case 4:
+                SetFourPlayer();
+                break;
+            default:
+                // an error has occurred because the default case should never be reached in this situation.
+                break;
         }
+    }
+
+    public void SetTwoPlayer()
+    {
+        topLeftCamera.rect = new Rect(0, 0.5f, 1f, 0.5f);
+        topRightCamera.gameObject.SetActive(false);
+        bottomLeftCamera.gameObject.SetActive(false);
+        bottomRightCamera.rect = new Rect(0, 0, 1f, 0.5f);
+    }
+
+    public void SetThreePlayer()
+    {
+        topLeftCamera.rect = new Rect(0, 0.5f, 1f, 0.5f);
+        topRightCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
+        bottomLeftCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+        bottomRightCamera.gameObject.SetActive(false);
+    }
+
+    public void SetFourPlayer()
+    {
+        topLeftCamera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
+        topRightCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+        bottomLeftCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
+        bottomRightCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
     }
 }
