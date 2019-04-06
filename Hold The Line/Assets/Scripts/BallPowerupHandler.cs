@@ -13,6 +13,7 @@ public class BallPowerupHandler : MonoBehaviour
 
     private int PowerupType;
     private float PowerupSpeed = 10.0f;
+    private int powerupTimer = 10;
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -39,11 +40,11 @@ public class BallPowerupHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
-        PowerupType = Random.Range(1, 5);
-        
+        //PowerupType = Random.Range(1, 5);
+        PowerupType = 3;
+		
         if (trigger.tag == "Powerup")
         {
-            Destroy(trigger.gameObject);
             switch (PowerupType)
             {
                 // Enlarge Paddle Powerup
@@ -75,7 +76,8 @@ public class BallPowerupHandler : MonoBehaviour
 
                 // Damage increase powerup
                 case 3:
-
+					Ball.gameObject.tag = "IncBallDmgPowerup";
+					Invoke("ResetIncBallDmg", powerupTimer);
                     break;
 
                 // Control inversion powerup
@@ -110,10 +112,16 @@ public class BallPowerupHandler : MonoBehaviour
                 default:
                     break;
             }
+			Destroy(trigger.gameObject);
             //Powerup information here to call the method that performs the powerup
         }
     }
-
+	
+	public void ResetIncBallDmg()
+    {
+        gameObject.tag = "Untagged";
+    }
+	
     public void ResetSpeed()
     {
         Ball.SetSpeed(Ball.GetSpeed() - PowerupSpeed);

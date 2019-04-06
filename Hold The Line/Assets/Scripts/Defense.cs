@@ -5,11 +5,11 @@ using UnityEngine;
 public class Defense : MonoBehaviour
 {
 	Renderer defenseRenderer;
-	int counter = 0;
+	private int counter = 0;
 
     void Start()
     {
-        // Get the GameObject's Renderer component
+        // This allows us to change the defense wall's color
         defenseRenderer = GetComponent<Renderer>();
     }
 
@@ -18,6 +18,11 @@ public class Defense : MonoBehaviour
 		// Shows the amount of damage taken by the ball
 		if(impact.gameObject.name == "Ball")
 		{
+			if(impact.gameObject.tag == "IncBallDmgPowerup")
+			{
+				++counter;
+			}
+			
 			switch(++counter)
 			{
 				case 1:
@@ -36,7 +41,7 @@ public class Defense : MonoBehaviour
 	void Update()
 	{
 		// This removes the defense wall on the 4th hit
-		if(counter == 4)
+		if(counter >= 4)
 		{
 			Destroy(gameObject);
 		}
