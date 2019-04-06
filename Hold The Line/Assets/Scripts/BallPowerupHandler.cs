@@ -39,8 +39,8 @@ public class BallPowerupHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
-        PowerupType = Random.Range(1, 5);
-
+        //PowerupType = Random.Range(1, 5);
+        PowerupType = 4;
         if (trigger.tag == "Powerup")
         {
             Destroy(trigger.gameObject);
@@ -80,7 +80,31 @@ public class BallPowerupHandler : MonoBehaviour
 
                 // Control inversion powerup
                 case 4:
-
+                    switch (lastPaddleHit)
+                    {
+                        case 1:
+                            player2.InvertControls();
+                            player3.InvertControls();
+                            player4.InvertControls();
+                            break;
+                        case 2:
+                            player1.InvertControls();
+                            player3.InvertControls();
+                            player4.InvertControls();
+                            break;
+                        case 3:
+                            player1.InvertControls();
+                            player2.InvertControls();
+                            player4.InvertControls();
+                            break;
+                        case 4:
+                            player1.InvertControls();
+                            player2.InvertControls();
+                            player3.InvertControls();
+                            break;
+                        default:
+                            break;
+                    }
                     break;
 
                 default:

@@ -14,6 +14,7 @@ public class Paddle : MonoBehaviour
     private int currentPlayer = 0;
     [SerializeField]
     private int powerupTimer = 10;
+    private bool inverted;
     string playerInput = null;
 
     // Start is called before the first frame update.
@@ -43,13 +44,21 @@ public class Paddle : MonoBehaviour
             }
         }
         playerInput = ("Player" + currentPlayer.ToString());
+        inverted = false;
     }
 
     // Update is called once per frame
     // Reads input from controller to determine which direction and speed to move the paddle. 
     void Update()
     {
-        inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
+        if(!inverted)
+        {
+            inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
+        }
+        else
+        {
+            inputVector = new Vector3(-Input.GetAxis(playerInput), 0, 0);
+        }
         StopPaddleAtWall();
         transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
 
@@ -132,8 +141,16 @@ public class Paddle : MonoBehaviour
         paddle.gameObject.transform.localScale = new Vector3(4, 0.25f, 1);
         Invoke("ResetPaddle", powerupTimer);
     }
+    
+    public void InvertControls()
+    {
+        inverted = true;
+        Invoke("ResetPaddle", powerupTimer);
+    }
+
     public void ResetPaddle()
     {
+        inverted = false;
         paddle.gameObject.transform.localScale = new Vector3(2, 0.25f, 1);
     }
 }
