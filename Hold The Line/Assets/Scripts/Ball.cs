@@ -74,9 +74,9 @@ public class Ball : MonoBehaviour
         transform.Rotate(rotation, Space.World);
     }
 
-    public void SetSpeed(float s)
+    public float SetSpeed(float s)
     {
-        speed = s;
+        return speed = s;
     }
 
     public float GetSpeed()
