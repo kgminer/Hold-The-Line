@@ -41,3 +41,17 @@ The video game Hold the Line is a 2D competitive arcade game. It is designed for
   - Unit Testing
   - [Acceptance Testing](https://docs.google.com/document/d/154xEoK8J_vCtzeEK2uVsxYIZLYIgcbiLwa-_4h9i0bg/edit)
 - [Product Demonstration](https://github.com/kgminer/Hold-The-Line/blob/master/sprint2/product_demonstration_2.md)
+# Sprint 3
+
+- [Product Backlog](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/product_backlog_3.md)
+- [Sprint Backlog](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/sprint_backlog_3.md)
+  - [Burndown Chart]()
+- [Requirements](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/requirements_3.md)
+- Design Documents
+  - [System Architecture](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/architecture_3.md)
+  - [Class Diagrams]()
+  - [Sequence Diagrams](https://github.com/kgminer/Hold-The-Line/blob/master/sprint1/Sequence%20Diagram.PNG)
+- [Source Code](https://github.com/kgminer/Hold-The-Line/tree/master/Hold%20The%20Line)
+  - [Scripts](https://github.com/kgminer/Hold-The-Line/tree/master/Hold%20The%20Line/Assets/Scripts)
+- [Test Cases](https://docs.google.com/document/d/154xEoK8J_vCtzeEK2uVsxYIZLYIgcbiLwa-_4h9i0bg/edit)
+- [Product Demonstration](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/product_demonstration_3.md)
