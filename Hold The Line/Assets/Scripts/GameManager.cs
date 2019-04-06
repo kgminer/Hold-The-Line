@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Increases the difficulty every 45 seconds.
-        InvokeRepeating("IncreaseDifficulty", 10.0f, 15.0f);
+        InvokeRepeating("IncreaseDifficulty", 45.0f, 45.0f);
 
         // Begins sudden death mode after 10 minutes.
         Invoke("SuddenDeath", 600.0f);
