@@ -11,7 +11,6 @@ public class Ball : MonoBehaviour
     static readonly int NUMBER_OF_SECONDS_IN_MINUTE = 60;
     static readonly float BALL_RADIUS = 0.75f;
     
-
     // Start is called before the first frame update
     void Start()
     {
