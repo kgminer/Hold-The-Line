@@ -39,8 +39,8 @@ public class BallPowerupHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
-        //PowerupType = Random.Range(1, 5);
-        PowerupType = 4;
+        PowerupType = Random.Range(1, 5);
+        
         if (trigger.tag == "Powerup")
         {
             Destroy(trigger.gameObject);
