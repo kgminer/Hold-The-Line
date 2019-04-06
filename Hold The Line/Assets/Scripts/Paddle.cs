@@ -15,7 +15,9 @@ public class Paddle : MonoBehaviour
     [SerializeField]
     private int powerupTimer = 10;
     private bool inverted;
+    private bool canGrabBall;
     string playerInput = null;
+    List<GameObject> Balls;
 
     // Start is called before the first frame update.
     // Determines which player number the paddle is for based on the location of the paddle.
@@ -45,6 +47,7 @@ public class Paddle : MonoBehaviour
         }
         playerInput = ("Player" + currentPlayer.ToString());
         inverted = false;
+        Balls = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -60,8 +63,42 @@ public class Paddle : MonoBehaviour
             inputVector = new Vector3(-Input.GetAxis(playerInput), 0, 0);
         }
         StopPaddleAtWall();
+        //Rotate any of the balls that are in the list
         transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
 
+        if(canGrabBall && Input.GetButton("Submit"))
+        {
+            //go through each ball in the list and set their speeds to 0
+            Debug.Log("Grabbing Ball");
+            foreach (GameObject ball in Balls)
+            {
+                ball.GetComponent<Ball>().SetSpeed(0);
+            }
+        }
+
+        if(canGrabBall && Input.GetButtonUp("Submit"))
+        {
+            //set a new velocity and speed for each of the balls in the list
+            Debug.Log("Releasing Ball");
+            foreach (GameObject ball in Balls)
+            {
+                ball.GetComponent<Ball>().SetSpeed(15);
+            }
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Balls.Add(other.gameObject);
+        Debug.Log("List size: " + Balls.Count);
+        canGrabBall = true;
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        Balls.Remove(other.gameObject);
+        Debug.Log("List size: " + Balls.Count);
+        canGrabBall = false;
     }
 
     // Checks if the paddle is to the left or to the right of the pivot point. Positive is right, negative is left.
