@@ -65,14 +65,16 @@ public class Paddle : MonoBehaviour
         StopPaddleAtWall();
         //Rotate any of the balls that are in the list
         transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
+        
 
-        if(canGrabBall && Input.GetButton("Submit"))
+        if (canGrabBall && Input.GetButton("Submit"))
         {
             //go through each ball in the list and set their speeds to 0
             Debug.Log("Grabbing Ball");
             foreach (GameObject ball in Balls)
             {
                 ball.GetComponent<Ball>().SetSpeed(0);
+                ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
             }
         }
 
