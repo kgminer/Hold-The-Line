@@ -12,7 +12,7 @@ public class BallPowerupHandler : MonoBehaviour
     public Paddle player4;
 
     private int PowerupType;
-    private float PowerupSpeed = 10.0f;
+    private float PowerupSpeed = 5.0f;
 
     public void OnCollisionEnter(Collision collision)
     {
