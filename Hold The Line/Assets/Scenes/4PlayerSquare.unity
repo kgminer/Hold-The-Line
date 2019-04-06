@@ -1802,7 +1802,6 @@ GameObject:
   m_Component:
   - component: {fileID: 247700355}
   - component: {fileID: 247700357}
-  - component: {fileID: 247700356}
   m_Layer: 0
   m_Name: Bottom Right Camera
   m_TagString: Untagged
@@ -1824,14 +1823,6 @@ Transform:
   m_Father: {fileID: 179445813}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 30, y: -45, z: 0}
---- !u!81 &247700356
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247700354}
-  m_Enabled: 1
 --- !u!20 &247700357
 Camera:
   m_ObjectHideFlags: 0
@@ -3345,7 +3336,7 @@ GameObject:
   - component: {fileID: 529036854}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Boulder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3435,7 +3426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301c34511b2be314e8f5d5337c724d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 15
   ball: {fileID: 0}
 --- !u!54 &529036852
 Rigidbody:
@@ -5395,6 +5386,7 @@ GameObject:
   - component: {fileID: 867748472}
   - component: {fileID: 867748471}
   - component: {fileID: 867748470}
+  - component: {fileID: 867748474}
   - component: {fileID: 867748473}
   m_Layer: 0
   m_Name: Cube
@@ -5491,6 +5483,19 @@ MonoBehaviour:
   paddle: {fileID: 867748469}
   centerPoint: {fileID: 925300288}
   powerupTimer: 10
+--- !u!65 &867748474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867748468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2, z: 1.0000004}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &872509285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,6 +7501,7 @@ GameObject:
   - component: {fileID: 1323159356}
   - component: {fileID: 1323159355}
   - component: {fileID: 1323159354}
+  - component: {fileID: 1323159357}
   - component: {fileID: 1323159353}
   m_Layer: 0
   m_Name: Cube
@@ -7592,6 +7598,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323159351}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1323159357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323159351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 3.5, z: 1.0000004}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &1323552069
 GameObject:
   m_ObjectHideFlags: 0
@@ -8300,7 +8319,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1483238173}
   - component: {fileID: 1483238175}
-  - component: {fileID: 1483238174}
   m_Layer: 0
   m_Name: Top Right Camera
   m_TagString: Untagged
@@ -8322,14 +8340,6 @@ Transform:
   m_Father: {fileID: 179445813}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 30, y: 225, z: 0}
---- !u!81 &1483238174
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483238172}
-  m_Enabled: 1
 --- !u!20 &1483238175
 Camera:
   m_ObjectHideFlags: 0
@@ -9680,7 +9690,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1774794920}
   - component: {fileID: 1774794922}
-  - component: {fileID: 1774794921}
   m_Layer: 0
   m_Name: Bottom Left Camera
   m_TagString: Untagged
@@ -9702,14 +9711,6 @@ Transform:
   m_Father: {fileID: 179445813}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
---- !u!81 &1774794921
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774794919}
-  m_Enabled: 1
 --- !u!20 &1774794922
 Camera:
   m_ObjectHideFlags: 0

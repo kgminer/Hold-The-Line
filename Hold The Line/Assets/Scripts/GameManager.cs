@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Increases the difficulty every 45 seconds.
-        InvokeRepeating("IncreaseDifficulty", 45.0f, 45.0f);
+        InvokeRepeating("IncreaseDifficulty", 10.0f, 15.0f);
 
         // Begins sudden death mode after 10 minutes.
         Invoke("SuddenDeath", 600.0f);
@@ -113,7 +113,6 @@ public class GameManager : MonoBehaviour
     // Spawns a new ball and increases the speed of all balls every time it is invoked.
     void IncreaseDifficulty()
     {
-        Debug.Log("We made it");
         Instantiate(Ball, new Vector3(0,0.38f,0), Quaternion.identity);
         Ball.SetSpeed(Ball.GetSpeed() + 5);
     }

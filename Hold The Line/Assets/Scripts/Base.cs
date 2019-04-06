@@ -6,7 +6,7 @@ public class Base : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Ball")
+        if(other.gameObject.tag == "Boulder")
         {
             this.gameObject.SetActive(false);
             GameManager.activePlayers--;

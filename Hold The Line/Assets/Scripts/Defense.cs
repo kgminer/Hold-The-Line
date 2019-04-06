@@ -16,7 +16,7 @@ public class Defense : MonoBehaviour
 	void OnCollisionEnter(Collision impact) 
 	{
 		// Shows the amount of damage taken by the ball
-		if(impact.gameObject.name == "Ball")
+		if(impact.gameObject.tag == "Boulder")
 		{
 			if(impact.gameObject.tag == "IncBallDmgPowerup")
 			{
