@@ -5,10 +5,14 @@ using UnityEngine;
 public class BallPowerupHandler : MonoBehaviour
 {
     private int lastPaddleHit = 0;
+    public Ball Ball;
     public Paddle player1;
     public Paddle player2;
     public Paddle player3;
     public Paddle player4;
+
+    private int PowerupType;
+    private float PowerupSpeed = 10.0f;
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -35,27 +39,59 @@ public class BallPowerupHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
+        PowerupType = Random.Range(1, 5);
+
         if (trigger.tag == "Powerup")
         {
             Destroy(trigger.gameObject);
-            switch (lastPaddleHit)
+            switch (PowerupType)
             {
+                // Enlarge Paddle Powerup
                 case 1:
-                    player1.EnlargePaddle();
+                    switch (lastPaddleHit)
+                    {
+                        case 1:
+                            player1.EnlargePaddle();
+                            break;
+                        case 2:
+                            player2.EnlargePaddle();
+                            break;
+                        case 3:
+                            player3.EnlargePaddle();
+                            break;
+                        case 4:
+                            player4.EnlargePaddle();
+                            break;
+                        default:
+                            break;
+                    }
                     break;
+
+                // Ball speed increase powerup
                 case 2:
-                    player2.EnlargePaddle();
+                    Ball.SetSpeed(Ball.GetSpeed() + PowerupSpeed);
+                    Invoke("ResetSpeed", 10.0f);
                     break;
+
+                // Damage increase powerup
                 case 3:
-                    player3.EnlargePaddle();
+
                     break;
+
+                // Control inversion powerup
                 case 4:
-                    player4.EnlargePaddle();
+
                     break;
+
                 default:
                     break;
             }
             //Powerup information here to call the method that performs the powerup
         }
+    }
+
+    public void ResetSpeed()
+    {
+        Ball.SetSpeed(Ball.GetSpeed() - PowerupSpeed);
     }
 }
