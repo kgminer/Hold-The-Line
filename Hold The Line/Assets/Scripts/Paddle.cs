@@ -84,6 +84,8 @@ public class Paddle : MonoBehaviour
             Debug.Log("Releasing Ball");
             foreach (GameObject ball in Balls)
             {
+                Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
+                ball.GetComponent<Ball>().SetVelocity(new Vector3(.5f, 0, .5f));
                 ball.GetComponent<Ball>().SetSpeed(15);
             }
         }

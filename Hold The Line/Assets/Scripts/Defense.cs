@@ -18,10 +18,12 @@ public class Defense : MonoBehaviour
 		// Shows the amount of damage taken by the ball
 		if(impact.gameObject.tag == "Boulder")
 		{
-			if(impact.gameObject.tag == "IncBallDmgPowerup")
+			if(impact.gameObject.GetComponent<Ball>().GetIncreasedDamage())
 			{
 				++counter;
-			}
+                impact.gameObject.GetComponent<Ball>().SetIncreasedDamage(false);
+
+            }
 			
 			switch(++counter)
 			{

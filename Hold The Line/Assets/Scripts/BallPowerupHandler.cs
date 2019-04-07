@@ -40,8 +40,7 @@ public class BallPowerupHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
-        //PowerupType = Random.Range(1, 5);
-        PowerupType = 3;
+        PowerupType = Random.Range(1, 5);
 		
         if (trigger.tag == "Powerup")
         {
@@ -76,7 +75,7 @@ public class BallPowerupHandler : MonoBehaviour
 
                 // Damage increase powerup
                 case 3:
-					Ball.gameObject.tag = "IncBallDmgPowerup";
+                    Ball.SetIncreasedDamage(true);
 					Invoke("ResetIncBallDmg", powerupTimer);
                     break;
 
@@ -119,7 +118,7 @@ public class BallPowerupHandler : MonoBehaviour
 	
 	public void ResetIncBallDmg()
     {
-        gameObject.tag = "Untagged";
+        Ball.SetIncreasedDamage(false);
     }
 	
     public void ResetSpeed()

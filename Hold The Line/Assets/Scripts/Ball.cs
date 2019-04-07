@@ -10,12 +10,14 @@ public class Ball : MonoBehaviour
     Rigidbody ball;
     static readonly int NUMBER_OF_SECONDS_IN_MINUTE = 60;
     static readonly float BALL_RADIUS = 0.75f;
+    private bool increasedDamage;
     
     // Start is called before the first frame update
     void Start()
     {
         ball = GetComponent<Rigidbody>();
         ball.velocity = BallStartDirectionVector() * speed;
+        increasedDamage = false;
     }
 
     // Ensures that the ball is moving with a constant velocity and rotation.
@@ -81,5 +83,25 @@ public class Ball : MonoBehaviour
     public float GetSpeed()
     {
         return speed;
+    }
+
+    public Vector3 GetVelocity()
+    {
+        return ball.velocity;
+    }
+
+    public void SetVelocity(Vector3 newVelocity)
+    {
+        ball.velocity = newVelocity;
+    }
+
+    public bool GetIncreasedDamage()
+    {
+        return increasedDamage;
+    }
+
+    public void SetIncreasedDamage(bool newValue)
+    {
+        increasedDamage = newValue;
     }
 }
