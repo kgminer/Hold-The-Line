@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44129848, g: 0.4901014, b: 0.5701535, a: 1}
+  m_IndirectSpecularColor: {r: 0.44129843, g: 0.49010116, b: 0.5701529, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1915,6 +1915,7 @@ GameObject:
   - component: {fileID: 336050855}
   - component: {fileID: 336050854}
   - component: {fileID: 336050853}
+  - component: {fileID: 336050856}
   - component: {fileID: 336050852}
   m_Layer: 0
   m_Name: Cube
@@ -2011,6 +2012,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336050850}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &336050856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336050850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 3.5, z: 1.0000004}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &339527081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4259,8 +4273,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 2, z: 1.0000004}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 1.4, y: 3.5, z: 1.0000004}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &872509285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8893,6 +8907,7 @@ GameObject:
   - component: {fileID: 1975567946}
   - component: {fileID: 1975567945}
   - component: {fileID: 1975567944}
+  - component: {fileID: 1975567947}
   - component: {fileID: 1975567943}
   m_Layer: 0
   m_Name: Cube
@@ -8989,6 +9004,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975567941}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1975567947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975567941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 3.5, z: 1.0000005}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &2002537446
 GameObject:
   m_ObjectHideFlags: 0

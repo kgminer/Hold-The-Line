@@ -17,7 +17,11 @@ public class Paddle : MonoBehaviour
     private bool inverted;
     private bool canGrabBall;
     string playerInput = null;
-    List<GameObject> Balls;
+    string grabInput = null;
+    List<GameObject> BallsPlayer1;
+    List<GameObject> BallsPlayer2;
+    List<GameObject> BallsPlayer3;
+    List<GameObject> BallsPlayer4;
 
     // Start is called before the first frame update.
     // Determines which player number the paddle is for based on the location of the paddle.
@@ -46,8 +50,12 @@ public class Paddle : MonoBehaviour
             }
         }
         playerInput = ("Player" + currentPlayer.ToString());
+        grabInput = ("Grab Ball " + currentPlayer.ToString());
         inverted = false;
-        Balls = new List<GameObject>();
+        BallsPlayer1 = new List<GameObject>();
+        BallsPlayer2 = new List<GameObject>();
+        BallsPlayer3 = new List<GameObject>();
+        BallsPlayer4 = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -65,43 +73,154 @@ public class Paddle : MonoBehaviour
         StopPaddleAtWall();
         //Rotate any of the balls that are in the list
         transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
-        
-
-        if (canGrabBall && Input.GetButton("Submit"))
+        //Debug.Log("currentPlayer: " + currentPlayer + " centerPoint: " + centerPoint);
+        switch (currentPlayer)
         {
-            //go through each ball in the list and set their speeds to 0
-            Debug.Log("Grabbing Ball");
-            foreach (GameObject ball in Balls)
-            {
-                ball.GetComponent<Ball>().SetSpeed(0);
-                ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
-            }
-        }
+            case 1:
+                //Grabbing Functionality for Player 1
+                if (gameObject.tag == "Player1" && BallsPlayer1.Count != 0 && Input.GetButton(grabInput))
+                {
+                    Debug.Log("Entering Case 1");
+                    //go through each ball in the list and set their speeds to 0
+                    Debug.Log("Grabbing Ball");
+                    foreach (GameObject ball in BallsPlayer1)
+                    {
+                        ball.GetComponent<Ball>().SetSpeed(0);
+                        ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
+                    }
+                }
 
-        if(canGrabBall && Input.GetButtonUp("Submit"))
-        {
-            //set a new velocity and speed for each of the balls in the list
-            Debug.Log("Releasing Ball");
-            foreach (GameObject ball in Balls)
-            {
-                Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
-                ball.GetComponent<Ball>().SetVelocity(new Vector3(.5f, 0, .5f));
-                ball.GetComponent<Ball>().SetSpeed(15);
-            }
-        }
+                if (gameObject.tag == "Player1" && BallsPlayer1.Count != 0 && Input.GetButtonUp(grabInput))
+                {
+                    //set a new velocity and speed for each of the balls in the list
+                    Debug.Log("Releasing Ball");
+                    foreach (GameObject ball in BallsPlayer1)
+                    {
+                        ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
+                        ball.GetComponent<Ball>().SetSpeed(15);
+                    }
+                }
+                break;
+            case 2:
+                //Grabbing Functionality for Player 2
+                if (gameObject.tag == "Player2" && BallsPlayer2.Count != 0 && Input.GetButton(grabInput))
+                {
+                    Debug.Log("Entering Case 2");
+                    //go through each ball in the list and set their speeds to 0
+                    Debug.Log("Grabbing Ball");
+                    foreach (GameObject ball in BallsPlayer2)
+                    {
+                        ball.GetComponent<Ball>().SetSpeed(0);
+                        ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
+                    }
+                }
+
+                if (gameObject.tag == "Player2" && BallsPlayer2.Count != 0 && Input.GetButtonUp(grabInput))
+                {
+                    //set a new velocity and speed for each of the balls in the list
+                    Debug.Log("Releasing Ball");
+                    foreach (GameObject ball in BallsPlayer2)
+                    {
+                        Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
+                        ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
+                        ball.GetComponent<Ball>().SetSpeed(15);
+                    }
+                }
+                break;
+            case 3:
+                //Grabbing Functionality for Player 3
+                if (gameObject.tag == "Player3" && BallsPlayer3.Count != 0 && Input.GetButton(grabInput))
+                {
+                    Debug.Log("Entering Case 3");
+                    //go through each ball in the list and set their speeds to 0
+                    Debug.Log("Grabbing Ball");
+                    foreach (GameObject ball in BallsPlayer3)
+                    {
+                        ball.GetComponent<Ball>().SetSpeed(0);
+                        ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
+                    }
+                }
+
+                if (gameObject.tag == "Player3" && BallsPlayer3.Count != 0 && Input.GetButtonUp(grabInput))
+                {
+                    //set a new velocity and speed for each of the balls in the list
+                    Debug.Log("Releasing Ball");
+                    foreach (GameObject ball in BallsPlayer3)
+                    {
+                        Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
+                        ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
+                        ball.GetComponent<Ball>().SetSpeed(15);
+                    }
+                }
+                break;
+            case 4:
+                //Grabbing Functionality for Player 4
+                if (gameObject.tag == "Player4" && BallsPlayer4.Count != 0 && Input.GetButton(grabInput))
+                {
+                    Debug.Log("Entering Case 4");
+                    //go through each ball in the list and set their speeds to 0
+                    Debug.Log("Grabbing Ball");
+                    foreach (GameObject ball in BallsPlayer4)
+                    {
+                        ball.GetComponent<Ball>().SetSpeed(0);
+                        ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
+                    }
+                }
+
+                if (gameObject.tag == "Player4" && BallsPlayer4.Count != 0 && Input.GetButtonUp(grabInput))
+                {
+                    //set a new velocity and speed for each of the balls in the list
+                    Debug.Log("Releasing Ball");
+                    foreach (GameObject ball in BallsPlayer4)
+                    {
+                        Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
+                        ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
+                        ball.GetComponent<Ball>().SetSpeed(15);
+                    }
+                }
+                break;
+        }    
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        Balls.Add(other.gameObject);
-        Debug.Log("List size: " + Balls.Count);
+        switch (currentPlayer)
+        {
+            case 1:
+                BallsPlayer1.Add(other.gameObject);
+                break;
+            case 2:
+                BallsPlayer2.Add(other.gameObject);
+                break;
+            case 3:
+                BallsPlayer3.Add(other.gameObject);
+                break;
+            case 4:
+                BallsPlayer4.Add(other.gameObject);
+                break;
+        }
+        //Debug.Log("List size: " + Balls.Count);
         canGrabBall = true;
     }
 
     public void OnTriggerExit(Collider other)
     {
-        Balls.Remove(other.gameObject);
-        Debug.Log("List size: " + Balls.Count);
+        switch (currentPlayer)
+        {
+            case 1:
+                BallsPlayer1.Remove(other.gameObject);
+                break;
+            case 2:
+                BallsPlayer2.Remove(other.gameObject);
+                break;
+            case 3:
+                BallsPlayer3.Remove(other.gameObject);
+                break;
+            case 4:
+                BallsPlayer4.Remove(other.gameObject);
+                break;
+        }
+        //Debug.Log("List size: " + Balls.Count);
         canGrabBall = false;
     }
 
