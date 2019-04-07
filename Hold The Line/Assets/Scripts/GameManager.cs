@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public static int activePlayers;
     public static int state;
     public static bool suddenDeath = false;
-    public static float audioVolume = 1f;
+    public static float audioVolume;
     public static bool topDownCameraMode;
     private int winningBase, numberOfPlayersAtStart;
     public const int RUNNING = 1, PAUSE = 2, GAME_OVER = 3;
