@@ -70,7 +70,7 @@ public class BallPowerupHandler : MonoBehaviour
                 // Ball speed increase powerup
                 case 2:
                     Ball.SetSpeed(Ball.GetSpeed() + PowerupSpeed);
-                    Invoke("ResetSpeed", 10.0f);
+                    Invoke("ResetSpeed", powerupTimer);
                     break;
 
                 // Damage increase powerup
@@ -118,7 +118,10 @@ public class BallPowerupHandler : MonoBehaviour
 	
 	public void ResetIncBallDmg()
     {
-        Ball.SetIncreasedDamage(false);
+        if (!GameManager.suddenDeath)
+        {
+            Ball.SetIncreasedDamage(false);
+        }
     }
 	
     public void ResetSpeed()

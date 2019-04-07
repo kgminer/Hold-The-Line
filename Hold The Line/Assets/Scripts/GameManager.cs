@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public static int activePlayers;
     public static int state;
+    public static bool suddenDeath = false;
     public static bool topDownCameraMode;
     private int winningBase, numberOfPlayersAtStart;
     public const int RUNNING = 1, PAUSE = 2, GAME_OVER = 3;
@@ -23,11 +24,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Increases the difficulty every 45 seconds.
-        InvokeRepeating("IncreaseDifficulty", 10.0f, 15.0f);
+        // Increases the difficulty every 20 seconds.
+        InvokeRepeating("IncreaseDifficulty", 20.0f, 20.0f);
 
-        // Begins sudden death mode after 10 minutes.
-        Invoke("SuddenDeath", 600.0f);
+        // Begins sudden death mode after 5 minutes.
+        Invoke("SuddenDeath", 300.0f);
 
         // Enables the correct amount of players according to what the user has chosen.
         switch (activePlayers)
@@ -117,9 +118,12 @@ public class GameManager : MonoBehaviour
         Ball.SetSpeed(Ball.GetSpeed() + 5);
     }
 
-    // Starts sudden death mode which increases the damage of the balls.
+    // Starts sudden death mode which speeds up and increases the damage of the balls.
     void SuddenDeath()
     {
-
+        Ball.SetSpeed(Ball.GetSpeed() + 10);
+        Ball.SetIncreasedDamage(true);
+        suddenDeath = true;
+        HUD.DisplaySuddenDeathText();
     }
 }

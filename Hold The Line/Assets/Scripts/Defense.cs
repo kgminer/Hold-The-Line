@@ -20,9 +20,15 @@ public class Defense : MonoBehaviour
 		{
 			if(impact.gameObject.GetComponent<Ball>().GetIncreasedDamage())
 			{
-				++counter;
-                impact.gameObject.GetComponent<Ball>().SetIncreasedDamage(false);
-
+                if (!GameManager.suddenDeath)
+                {
+                    ++counter;
+                    impact.gameObject.GetComponent<Ball>().SetIncreasedDamage(false);
+                }
+                else
+                {
+                    ++counter;
+                }
             }
 			
 			switch(++counter)
@@ -36,6 +42,8 @@ public class Defense : MonoBehaviour
 				case 3:
 					defenseRenderer.material.color = Color.red;
 					break;
+                default:
+                    break;
 			}
 		}
 	}

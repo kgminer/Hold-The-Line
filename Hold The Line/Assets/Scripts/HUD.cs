@@ -12,12 +12,18 @@ public class HUD : MonoBehaviour
     public GameObject TopRightLabel;
     public GameObject BottomRightLabel;
     public GameObject WinnerLabel;
+    public GameObject SuddenDeathLabel;
 
 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void DisplaySuddenDeathText()
+    {
+        SuddenDeathLabel.SetActive(true);
     }
 
     public void OpenPausePanel()

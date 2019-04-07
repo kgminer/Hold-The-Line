@@ -17,7 +17,15 @@ public class Ball : MonoBehaviour
     {
         ball = GetComponent<Rigidbody>();
         ball.velocity = BallStartDirectionVector() * speed;
-        increasedDamage = false;
+
+        if (!GameManager.suddenDeath)
+        {
+            increasedDamage = false;
+        }
+        else
+        {
+            increasedDamage = true;
+        }
     }
 
     // Ensures that the ball is moving with a constant velocity and rotation.
