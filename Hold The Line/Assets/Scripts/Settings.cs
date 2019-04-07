@@ -8,4 +8,9 @@ public class Settings : MonoBehaviour
     {
         GameManager.topDownCameraMode = value;
     }
+
+    public void SetVolume(float newValue)
+    {
+        GameManager.audioVolume = newValue;
+    }
 }

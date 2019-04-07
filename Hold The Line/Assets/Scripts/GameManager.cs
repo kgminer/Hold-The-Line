@@ -12,10 +12,14 @@ public class GameManager : MonoBehaviour
     public GameObject BottomLeftBase;
     public GameObject TopRightBase;
     public GameObject BottomRightBase;
+    public AudioSource topDownAudio;
+    public AudioSource splitscreenAudio;
+    public AudioSource ballAudio;
 
     public static int activePlayers;
     public static int state;
     public static bool suddenDeath = false;
+    public static float audioVolume;
     public static bool topDownCameraMode;
     private int winningBase, numberOfPlayersAtStart;
     public const int RUNNING = 1, PAUSE = 2, GAME_OVER = 3;
@@ -64,6 +68,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         GameManager.state = RUNNING;
         numberOfPlayersAtStart = GameManager.activePlayers;
+        topDownAudio.volume = GameManager.audioVolume;
+        splitscreenAudio.volume = GameManager.audioVolume;
+        ballAudio.volume = GameManager.audioVolume / 10;
     }
 
     // Update is called once per frame
