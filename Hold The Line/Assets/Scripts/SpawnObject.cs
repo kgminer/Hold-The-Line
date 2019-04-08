@@ -8,7 +8,7 @@ public class SpawnObject : MonoBehaviour
     public Object powerupBlock;
     [SerializeField]
     public Vector3 spawnLocation = Vector3.zero;
-    private float spawnRange = 2;
+    private float spawnRange = 4;
     [SerializeField]
     private float spawnTime = 3f;
 

@@ -64,11 +64,26 @@ public class Paddle : MonoBehaviour
     {
         if(!inverted)
         {
-            inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
+            if(GameManager.topDownCameraMode && (currentPlayer == 1 || currentPlayer == 2))
+            {
+                inputVector = new Vector3(-Input.GetAxis(playerInput), 0, 0);
+            }
+            else
+            {
+                inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
+            }
+            
         }
         else
         {
-            inputVector = new Vector3(-Input.GetAxis(playerInput), 0, 0);
+            if (GameManager.topDownCameraMode && (currentPlayer == 1 || currentPlayer == 2))
+            {
+                inputVector = new Vector3(Input.GetAxis(playerInput), 0, 0);
+            }
+            else
+            {
+                inputVector = new Vector3(-Input.GetAxis(playerInput), 0, 0);
+            }
         }
         StopPaddleAtWall();
         //Rotate any of the balls that are in the list
@@ -80,9 +95,7 @@ public class Paddle : MonoBehaviour
                 //Grabbing Functionality for Player 1
                 if (gameObject.tag == "Player1" && BallsPlayer1.Count != 0 && Input.GetButton(grabInput))
                 {
-                    Debug.Log("Entering Case 1");
                     //go through each ball in the list and set their speeds to 0
-                    Debug.Log("Grabbing Ball");
                     foreach (GameObject ball in BallsPlayer1)
                     {
                         ball.GetComponent<Ball>().SetSpeed(0);
@@ -93,7 +106,6 @@ public class Paddle : MonoBehaviour
                 if (gameObject.tag == "Player1" && BallsPlayer1.Count != 0 && Input.GetButtonUp(grabInput))
                 {
                     //set a new velocity and speed for each of the balls in the list
-                    Debug.Log("Releasing Ball");
                     foreach (GameObject ball in BallsPlayer1)
                     {
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
@@ -105,9 +117,7 @@ public class Paddle : MonoBehaviour
                 //Grabbing Functionality for Player 2
                 if (gameObject.tag == "Player2" && BallsPlayer2.Count != 0 && Input.GetButton(grabInput))
                 {
-                    Debug.Log("Entering Case 2");
                     //go through each ball in the list and set their speeds to 0
-                    Debug.Log("Grabbing Ball");
                     foreach (GameObject ball in BallsPlayer2)
                     {
                         ball.GetComponent<Ball>().SetSpeed(0);
@@ -118,10 +128,8 @@ public class Paddle : MonoBehaviour
                 if (gameObject.tag == "Player2" && BallsPlayer2.Count != 0 && Input.GetButtonUp(grabInput))
                 {
                     //set a new velocity and speed for each of the balls in the list
-                    Debug.Log("Releasing Ball");
                     foreach (GameObject ball in BallsPlayer2)
                     {
-                        Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
                     }
@@ -131,9 +139,7 @@ public class Paddle : MonoBehaviour
                 //Grabbing Functionality for Player 3
                 if (gameObject.tag == "Player3" && BallsPlayer3.Count != 0 && Input.GetButton(grabInput))
                 {
-                    Debug.Log("Entering Case 3");
                     //go through each ball in the list and set their speeds to 0
-                    Debug.Log("Grabbing Ball");
                     foreach (GameObject ball in BallsPlayer3)
                     {
                         ball.GetComponent<Ball>().SetSpeed(0);
@@ -144,10 +150,8 @@ public class Paddle : MonoBehaviour
                 if (gameObject.tag == "Player3" && BallsPlayer3.Count != 0 && Input.GetButtonUp(grabInput))
                 {
                     //set a new velocity and speed for each of the balls in the list
-                    Debug.Log("Releasing Ball");
                     foreach (GameObject ball in BallsPlayer3)
                     {
-                        Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
                     }
@@ -157,9 +161,7 @@ public class Paddle : MonoBehaviour
                 //Grabbing Functionality for Player 4
                 if (gameObject.tag == "Player4" && BallsPlayer4.Count != 0 && Input.GetButton(grabInput))
                 {
-                    Debug.Log("Entering Case 4");
                     //go through each ball in the list and set their speeds to 0
-                    Debug.Log("Grabbing Ball");
                     foreach (GameObject ball in BallsPlayer4)
                     {
                         ball.GetComponent<Ball>().SetSpeed(0);
@@ -170,10 +172,8 @@ public class Paddle : MonoBehaviour
                 if (gameObject.tag == "Player4" && BallsPlayer4.Count != 0 && Input.GetButtonUp(grabInput))
                 {
                     //set a new velocity and speed for each of the balls in the list
-                    Debug.Log("Releasing Ball");
                     foreach (GameObject ball in BallsPlayer4)
                     {
-                        Debug.Log("Ball Velocity" + ball.GetComponent<Ball>().GetVelocity());
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
                     }

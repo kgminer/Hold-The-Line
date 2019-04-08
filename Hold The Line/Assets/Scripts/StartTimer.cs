@@ -9,7 +9,8 @@ public class StartTimer : MonoBehaviour
     float timeLeft = 5f;
     string seconds = null;
     private GUIStyle guiStyle = new GUIStyle();
-    
+    [SerializeField]
+    Font prehistoricFont;
 
     // Start is called before the first frame update
 
@@ -24,9 +25,10 @@ public class StartTimer : MonoBehaviour
         int windowXLocation = ((Screen.width - windowWidth)/ 2);
         int windowYLocation = ((Screen.height - windowHeight)/ 2);
 
-        guiStyle.fontSize = 100;
+        guiStyle.fontSize = 50;
         guiStyle.normal.textColor = Color.blue;
         guiStyle.alignment = TextAnchor.MiddleCenter;
+        guiStyle.font = prehistoricFont;
 
         if (timeLeft > 0)
         {

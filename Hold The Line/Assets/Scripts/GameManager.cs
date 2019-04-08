@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Increases the difficulty every 20 seconds.
-        InvokeRepeating("IncreaseDifficulty", 20.0f, 20.0f);
+        // Increases the difficulty every 25 seconds.
+        InvokeRepeating("IncreaseDifficulty", 35.0f, 35.0f);
 
-        // Begins sudden death mode after 5 minutes.
-        Invoke("SuddenDeath", 300.0f);
+        // Begins sudden death mode after 3 minutes.
+        Invoke("SuddenDeath", 180.0f);
 
         // Enables the correct amount of players according to what the user has chosen.
         switch (activePlayers)

@@ -12,7 +12,7 @@ public class BallPowerupHandler : MonoBehaviour
     public Paddle player4;
 
     private int PowerupType;
-    private float PowerupSpeed = 10.0f;
+    private float PowerupSpeed = 5.0f;
     private int powerupTimer = 10;
 
     public void OnCollisionEnter(Collision collision)
@@ -34,7 +34,7 @@ public class BallPowerupHandler : MonoBehaviour
             default:
                 break;
         }
-        Debug.Log("Last paddle hit = " + lastPaddleHit);
+        //Debug.Log("Last paddle hit = " + lastPaddleHit);
 
     }
 
