@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PowerupHandler">
-    <Position X="11.75" Y="3.75" Width="1.75" />
+    <Position X="11.5" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>4BAggAAAAAAAAAAkAAAAAAEAAAgAAAAKwAAQAgAAAAA=</HashCode>
       <FileName>Assets\Scripts\PowerupHandler.cs</FileName>
@@ -119,14 +119,27 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SpawnPowerUp">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="PowerupHandler1" Type="PowerupHandler">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.423" Y="0.144" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAQAAAAACAAAAAAAACQAAAAAAAAAIQAAAAAgAAEAAA=</HashCode>
       <FileName>Assets\Scripts\SpawnPowerUp.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PowerupHandler1" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SplitScreen">
     <Position X="5.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="HUD" Type="HUD">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.338" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAACQABAAABAiACAACAAAAAAAAAAAEEAAAA=</HashCode>
       <FileName>Assets\Scripts\SplitScreen.cs</FileName>

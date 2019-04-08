@@ -21,6 +21,14 @@ public class SpawnPowerUp : MonoBehaviour
         }
     }
 
+    public PowerupHandler PowerupHandler1
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     private void Start()
     {
         InvokeRepeating("SpawnNewPowerup", spawnTime, spawnTime);
