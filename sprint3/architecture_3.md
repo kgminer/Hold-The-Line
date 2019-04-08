@@ -15,7 +15,8 @@ Architecture Diagram:
 
 # Major Classes
 
-The Class Diagram can be found by clicking the link [here](https://drive.google.com/file/d/1nTNHmBsXDmiHwgTFE3tG03V_o0zKW2fb/view?usp=sharing).
+The Class Diagram can be found below 
+![](https://i.imgur.com/hg6pNpi.png).
 
 GameManager class: 
 
@@ -66,6 +67,20 @@ This class causes the players base to disappear if the ball makes contact with i
 HitSound Class:
 
 This class is responsible for playing an audio clip whenever any ball collides with any other game object. It relates to user story 27.
+
+SplitScreen Class:
+
+This class implements the split screen cameras at the start of the game. It relates to user stories 24 and 25.
+
+SpawnPowerUp Class:
+
+This class spawns the powerups around the map every 15 seconds. Relates to user stories 16, 18, 20, and 21.
+
+PowerUpHandler Class:
+
+This class implements the various powerups in the game after a powerup block is hit. Relates to user stories 16, 18, 20, and 21.
+
+
 
 # Data Design
 
