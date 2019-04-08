@@ -57,7 +57,7 @@ This class is responsible for user story 15 which deals with the transition from
 
 Defense Class:
 
-This class handles the color change of the blocks to visualize the damage taken by the ball. This is done with a counter that keeps track of how many times the ball has made contact with the block inside the OnTriggerEnter() function and change the material color accordingly. After 4 collisions, the block will destroy itself in the function Uptade(). These tie in to user story 14 as it requested a way to visualize damage taken and to disappear after a certain amount of damage is taken.
+This class handles the color change of the blocks to visualize the damage taken by the ball. This is done with a counter that keeps track of how many times the ball has made contact with the block inside the OnTriggerEnter() function and change the material color accordingly. If the ball hits the increased damage powerup, it will deal extra damage to the walls structures. After 4 collisions, the block will destroy itself in the function Uptade(). These tie in to user story 14 as it requested a way to visualize damage taken and to disappear after a certain amount of damage is taken. It also ties in to user story 20 as it wanted the ball to deal extra damage to destroy bases faster.
 
 Base Class:
 
