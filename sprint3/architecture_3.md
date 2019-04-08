@@ -16,7 +16,7 @@ Architecture Diagram:
 # Major Classes
 
 The Class Diagram can be found below 
-![](https://i.imgur.com/hg6pNpi.png).
+![](https://i.imgur.com/a4wSpgB.png).
 
 GameManager class: 
 
