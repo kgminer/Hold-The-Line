@@ -5247,7 +5247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerupBlock: {fileID: 7692228068485899257, guid: d7dc84b2f9d91d74da461019157dc7b4,
     type: 3}
-  spawnLocation: {x: 0, y: 0, z: 0}
+  powerupBlockTransform: {fileID: 7692228068485899261, guid: d7dc84b2f9d91d74da461019157dc7b4,
+    type: 3}
   spawnTime: 15
 --- !u!4 &421083275
 Transform:

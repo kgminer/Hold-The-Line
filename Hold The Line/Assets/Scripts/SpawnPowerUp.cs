@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnObject : MonoBehaviour
+public class SpawnPowerUp : MonoBehaviour
 {
     [SerializeField]
-    public Object powerupBlock;
+    public Object powerupBlock;                     // set to Power Up Block Prefab in the Unity Editor
+    private Vector3 spawnLocation = Vector3.zero;
     [SerializeField]
-    public Vector3 spawnLocation = Vector3.zero;
+    private Transform powerupBlockTransform;        // set to Power Up Block Transform Prefab in the Unity Editor
     private float spawnRange = 4;
     [SerializeField]
-    private float spawnTime = 3f;
+    private float spawnTime = 15f;
 
     private void Start()
     {
@@ -18,10 +19,10 @@ public class SpawnObject : MonoBehaviour
     }
 
     // Spawns a new powerup in a random location within the center of the map
-    void SpawnNewPowerup()
+    private void SpawnNewPowerup()
     {
         spawnLocation.x = Random.Range(-spawnRange, spawnRange);
-        spawnLocation.y = 0.64f;
+        spawnLocation.y = (powerupBlockTransform.localScale.y / 2);
         spawnLocation.z = Random.Range(-spawnRange, spawnRange);
         Instantiate(powerupBlock, spawnLocation, Quaternion.identity);
     }
