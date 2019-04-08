@@ -15,3 +15,4 @@
 |027| As a player, I want a sound effect to play whenever a ball hits something.|6|3| A sound effect plays when a ball hits a wall, a paddle, or a defense.| Timothy Smyth |
 |028| As a player, I want there to be background music that plays while the game is being played.|5|3| Whenever a game starts, a background track plays during the gameplay.| Timothy Smyth |
 |029| As a player, I want a countdown to the start of the game, so that I can make sure I'm ready to play.|4|4| At the start of a game, there is a countdown from 3 to 1. The game then says Start and the game begins.| T Davis |
+|030| As a player, I want to be able to adjust the volume of the game sounds, so that I can have the game be as loud as I would like it to be.|3|5| Moving a slider in the settings section of the Main Menu affects how loud the sounds are when a game is played.| Kenneth Gerhart |
