@@ -45,7 +45,7 @@ The video game Hold the Line is a 2D competitive arcade game. It is designed for
 
 - [Product Backlog](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/product_backlog_3.md)
 - [Sprint Backlog](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/sprint_backlog_3.md)
-  - [Burndown Chart]()
+  - [Burndown Chart](https://docs.google.com/spreadsheets/d/1sncNWNqFtwNv_eh0Vs_T2s4G7QHQD_BZSr_tpBFQQ9k/edit#gid=1757554440)
 - [Requirements](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/requirements_3.md)
 - Design Documents
   - [System Architecture](https://github.com/kgminer/Hold-The-Line/blob/master/sprint3/architecture_3.md)
