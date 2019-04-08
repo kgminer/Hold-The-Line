@@ -14,6 +14,14 @@ public class HUD : MonoBehaviour
     public GameObject WinnerLabel;
     public GameObject SuddenDeathLabel;
 
+    public GameManager GameManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()
