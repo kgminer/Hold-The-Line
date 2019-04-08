@@ -38,3 +38,8 @@
 |            033 |           024 | When the game starts with this camera mode selected, four cameras will be placed behind each paddle facing towards the board. | Verified |
 |            034 |           025 | The main menu will have an options button which goes to the options screen. | Verified |
 |            035 |           025 | The options screen will provide the option to switch between the two available camera angles (Top-down view and first-person view). | Verified |
+|            036 |           026 | The scene will play a sound every time a button on any of the menus is pressed. | Verified |
+|            037 |           027 | Whenever any ball object collides with another game object, a sound will play. | Verified |
+|            038 |           028 | When the game starts, a music track will play and loop for the duration of the game. | Verified |
+|            039 |           029 | When the game scene is entered, a 3 second countdown will display before the game starts. | Verified |
+|            040 |           030 | There will be an audio slider in the options menu which adjusts the volume of the game. | Verified |
