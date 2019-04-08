@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour
 {
+    public GameManager GameManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     public void SetCameraMode(bool value)
     {
         GameManager.topDownCameraMode = value;

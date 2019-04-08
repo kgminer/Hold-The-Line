@@ -8,6 +8,14 @@ public class Defense : MonoBehaviour
 	private int counter = 0;
 	private Color newColor;
 
+    public Base Base
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     void Start()
     {
         // This allows us to change the defense wall's color

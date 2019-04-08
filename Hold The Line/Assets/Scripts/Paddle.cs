@@ -23,6 +23,14 @@ public class Paddle : MonoBehaviour
     List<GameObject> BallsPlayer3;
     List<GameObject> BallsPlayer4;
 
+    public Base Base
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     // Start is called before the first frame update.
     // Determines which player number the paddle is for based on the location of the paddle.
     void Start() {

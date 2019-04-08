@@ -12,6 +12,14 @@ public class StartTimer : MonoBehaviour
     [SerializeField]
     Font prehistoricFont;
 
+    public GameManager GameManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     // Start is called before the first frame update
 
     void OnGUI()

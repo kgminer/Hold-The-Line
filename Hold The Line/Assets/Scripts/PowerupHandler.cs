@@ -2,18 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallPowerupHandler : MonoBehaviour
+public class PowerupHandler : MonoBehaviour
 {
     private int lastPaddleHit = 0;
-    public Ball Ball;
-    public Paddle player1;
-    public Paddle player2;
-    public Paddle player3;
-    public Paddle player4;
+    public Ball ball;                   // Set by Unity Editor
+    public Paddle player1;              // Set by Unity Editor
+    public Paddle player2;              // Set by Unity Editor
+    public Paddle player3;              // Set by Unity Editor
+    public Paddle player4;              // Set by Unity Editor
 
-    private int PowerupType;
-    private float PowerupSpeed = 5.0f;
+    private int powerupType = 0;
+    private float powerupSpeed = 5.0f;
     private int powerupTimer = 10;
+
+    public Paddle Paddle
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
+    public Defense Defense
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
+    public Ball Ball1
+    {
+        get => default;
+        set
+        {
+        }
+    }
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -40,11 +64,11 @@ public class BallPowerupHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
-        PowerupType = Random.Range(1, 5);
+        powerupType = Random.Range(1, 5);
 		
         if (trigger.tag == "Powerup")
         {
-            switch (PowerupType)
+            switch (powerupType)
             {
                 // Enlarge Paddle Powerup
                 case 1:
@@ -69,13 +93,13 @@ public class BallPowerupHandler : MonoBehaviour
 
                 // Ball speed increase powerup
                 case 2:
-                    Ball.SetSpeed(Ball.GetSpeed() + PowerupSpeed);
+                    ball.SetSpeed(ball.GetSpeed() + powerupSpeed);
                     Invoke("ResetSpeed", powerupTimer);
                     break;
 
                 // Damage increase powerup
                 case 3:
-                    Ball.SetIncreasedDamage(true);
+                    ball.SetIncreasedDamage(true);
 					Invoke("ResetIncBallDmg", powerupTimer);
                     break;
 
@@ -120,12 +144,12 @@ public class BallPowerupHandler : MonoBehaviour
     {
         if (!GameManager.suddenDeath)
         {
-            Ball.SetIncreasedDamage(false);
+            ball.SetIncreasedDamage(false);
         }
     }
 	
     public void ResetSpeed()
     {
-        Ball.SetSpeed(Ball.GetSpeed() - PowerupSpeed);
+        ball.SetSpeed(ball.GetSpeed() - powerupSpeed);
     }
 }

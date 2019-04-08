@@ -15,6 +15,14 @@ public class SplitScreen : MonoBehaviour
     [SerializeField]
     private Camera bottomRightCamera;
 
+    public HUD HUD
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     public void ConfigureTopDown()
     {
         topDownCamera.gameObject.SetActive(true);

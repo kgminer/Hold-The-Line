@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class StartGameOnClick : MonoBehaviour
 {
+    public GameManager GameManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     public void StartByIndex(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);

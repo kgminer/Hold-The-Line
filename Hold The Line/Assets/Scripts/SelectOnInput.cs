@@ -10,6 +10,14 @@ public class SelectOnInput : MonoBehaviour
 
     private bool buttonSelected = false;
 
+    public GameManager GameManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -13,6 +13,14 @@ public class SpawnPowerUp : MonoBehaviour
     [SerializeField]
     private float spawnTime = 15f;
 
+    public PowerupHandler PowerupHandler
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     private void Start()
     {
         InvokeRepeating("SpawnNewPowerup", spawnTime, spawnTime);

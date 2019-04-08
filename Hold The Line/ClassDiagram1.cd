@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ball">
+    <Position X="19.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCgEACAAAAQAAAAAIBACgAEAAUgACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerupHandler">
+    <Position X="11.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>4BAggAAAAAAAAAAkAAAAAAEAAAgAAAAKwAAQAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PowerupHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Paddle" />
+      <Property Name="Defense" />
+      <Property Name="Ball1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Base">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="GameManager" Type="GameManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-15.978" Y="0.108" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Base.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Defense">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <AssociationLine Name="Base" Type="Base">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="2.456" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAUIAAAAAQAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Defense.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Base" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>YgQAAAgAIGABAIUCIABAAGAQACAAAABEhAwAAEAAAIA=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HitSound">
+    <Position X="19.25" Y="2" Width="1.5" />
+    <AssociationLine Name="Ball" Type="Ball">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.081" Y="0.134" Height="0.182" Width="0.5" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\HitSound.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ball" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HUD">
+    <Position X="8.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>iAAgCAACgCRAAAAIAARAAASAAAAABAAIAIgIAAAGAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Paddle">
+    <Position X="14.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAACCgAQAECAAAQgAJAAAEAYCAQAAAAgBAQAA=</HashCode>
+      <FileName>Assets\Scripts\Paddle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Base" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QuitOnClick">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQA=</HashCode>
+      <FileName>Assets\Scripts\QuitOnClick.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SelectOnInput">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAQAACAAAAAAAAIAIAAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\SelectOnInput.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Settings">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAEABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Settings.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpawnPowerUp">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACAAAAAAAACQAAAAAAAAAIQAAAAAgAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\SpawnPowerUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SplitScreen">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAACQABAAABAiACAACAAAAAAAAAAAEEAAAA=</HashCode>
+      <FileName>Assets\Scripts\SplitScreen.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HUD" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StartGameOnClick">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\StartGameOnClick.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StartTimer">
+    <Position X="4" Y="5" Width="1.5" />
+    <AssociationLine Name="GameManager" Type="GameManager">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.23" Y="0.036" Height="0.182" Width="1.166" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAABASAAABAAQA=</HashCode>
+      <FileName>Assets\Scripts\StartTimer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
