@@ -306,7 +306,7 @@ public class Paddle : MonoBehaviour
     }
     public void EnlargePaddle()
     {
-        paddle.gameObject.transform.localScale = new Vector3(4, 0.25f, 1);
+        paddle.gameObject.transform.localScale = new Vector3(3, 0.25f, 1);
         Invoke("ResetPaddle", powerupTimer);
     }
     
