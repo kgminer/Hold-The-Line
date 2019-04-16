@@ -18,10 +18,11 @@ public class Paddle : MonoBehaviour
     private bool canGrabBall;
     string playerInput = null;
     string grabInput = null;
-    List<GameObject> BallsPlayer1;
-    List<GameObject> BallsPlayer2;
-    List<GameObject> BallsPlayer3;
-    List<GameObject> BallsPlayer4;
+    [SerializeField]
+    public List<GameObject> BallsPlayer1;
+    public List<GameObject> BallsPlayer2;
+    public List<GameObject> BallsPlayer3;
+    public List<GameObject> BallsPlayer4;
 
     public Base Base
     {
@@ -106,6 +107,7 @@ public class Paddle : MonoBehaviour
                     //go through each ball in the list and set their speeds to 0
                     foreach (GameObject ball in BallsPlayer1)
                     {
+                        
                         ball.GetComponent<Ball>().SetSpeed(0);
                         ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
                     }
@@ -115,9 +117,10 @@ public class Paddle : MonoBehaviour
                 {
                     //set a new velocity and speed for each of the balls in the list
                     foreach (GameObject ball in BallsPlayer1)
-                    {
+                    { 
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
+                        
                     }
                 }
                 break;
@@ -128,6 +131,7 @@ public class Paddle : MonoBehaviour
                     //go through each ball in the list and set their speeds to 0
                     foreach (GameObject ball in BallsPlayer2)
                     {
+                        
                         ball.GetComponent<Ball>().SetSpeed(0);
                         ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
                     }
@@ -140,6 +144,7 @@ public class Paddle : MonoBehaviour
                     {
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
+                        
                     }
                 }
                 break;
@@ -150,6 +155,7 @@ public class Paddle : MonoBehaviour
                     //go through each ball in the list and set their speeds to 0
                     foreach (GameObject ball in BallsPlayer3)
                     {
+                        
                         ball.GetComponent<Ball>().SetSpeed(0);
                         ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
                     }
@@ -162,6 +168,7 @@ public class Paddle : MonoBehaviour
                     {
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
+                        
                     }
                 }
                 break;
@@ -172,6 +179,7 @@ public class Paddle : MonoBehaviour
                     //go through each ball in the list and set their speeds to 0
                     foreach (GameObject ball in BallsPlayer4)
                     {
+                        
                         ball.GetComponent<Ball>().SetSpeed(0);
                         ball.transform.RotateAround(centerPoint.position, Vector3.up, speed * inputVector.x);
                     }
@@ -184,6 +192,7 @@ public class Paddle : MonoBehaviour
                     {
                         ball.GetComponent<Ball>().SetVelocity(gameObject.transform.position);
                         ball.GetComponent<Ball>().SetSpeed(15);
+                        
                     }
                 }
                 break;

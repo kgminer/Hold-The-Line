@@ -8,10 +8,20 @@ public class Ball : MonoBehaviour
     private float speed = 10;
     [SerializeField]
     Rigidbody ball;
+    [SerializeField]
+    GameObject ballObject;
     static readonly int NUMBER_OF_SECONDS_IN_MINUTE = 60;
     static readonly float BALL_RADIUS = 0.75f;
     private bool increasedDamage;
-    
+    [SerializeField]
+    Paddle paddle1;
+    [SerializeField]
+    Paddle paddle2;
+    [SerializeField]
+    Paddle paddle3;
+    [SerializeField]
+    Paddle paddle4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +38,10 @@ public class Ball : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        ResetBallVelocity();
+    }
     // Ensures that the ball is moving with a constant velocity and rotation.
     // These can be set in either order.
     private void LateUpdate()
@@ -111,5 +125,14 @@ public class Ball : MonoBehaviour
     public void SetIncreasedDamage(bool newValue)
     {
         increasedDamage = newValue;
+    }
+
+    private void ResetBallVelocity()
+    {
+        if (!paddle1.BallsPlayer1.Contains(ballObject) && !paddle2.BallsPlayer2.Contains(ballObject) && !paddle3.BallsPlayer3.Contains(ballObject) && !paddle4.BallsPlayer4.Contains(ballObject) && speed <= 0)
+        {
+            speed = 15;
+            ball.velocity = BallStartDirectionVector() * speed;
+        }
     }
 }

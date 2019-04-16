@@ -4274,6 +4274,10 @@ MonoBehaviour:
   paddle: {fileID: 336050851}
   centerPoint: {fileID: 1078088317}
   powerupTimer: 10
+  BallsPlayer1: []
+  BallsPlayer2: []
+  BallsPlayer3: []
+  BallsPlayer4: []
 --- !u!65 &336050853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4343,7 +4347,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 10, z: 1.0000004}
+  m_Size: {x: 1, y: 5, z: 1.0000004}
   m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!1001 &339527081
 PrefabInstance:
@@ -6137,7 +6141,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  ball: {fileID: 0}
+  ball: {fileID: 529036852}
+  ballObject: {fileID: 529036846}
+  paddle1: {fileID: 1323159353}
+  paddle2: {fileID: 1975567943}
+  paddle3: {fileID: 867748473}
+  paddle4: {fileID: 336050852}
 --- !u!54 &529036852
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9256,6 +9265,10 @@ MonoBehaviour:
   paddle: {fileID: 867748469}
   centerPoint: {fileID: 925300288}
   powerupTimer: 10
+  BallsPlayer1: []
+  BallsPlayer2: []
+  BallsPlayer3: []
+  BallsPlayer4: []
 --- !u!65 &867748474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9267,7 +9280,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 10, z: 1.0000004}
+  m_Size: {x: 1, y: 5, z: 1.0000004}
   m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!4 &869741624 stripped
 Transform:
@@ -13210,6 +13223,10 @@ MonoBehaviour:
   paddle: {fileID: 1323159352}
   centerPoint: {fileID: 1019753218}
   powerupTimer: 10
+  BallsPlayer1: []
+  BallsPlayer2: []
+  BallsPlayer3: []
+  BallsPlayer4: []
 --- !u!65 &1323159354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13279,7 +13296,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 10, z: 1.0000004}
+  m_Size: {x: 1, y: 5, z: 1.0000004}
   m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!1001 &1358611230
 PrefabInstance:
@@ -19070,6 +19087,10 @@ MonoBehaviour:
   paddle: {fileID: 1975567942}
   centerPoint: {fileID: 238831287}
   powerupTimer: 10
+  BallsPlayer1: []
+  BallsPlayer2: []
+  BallsPlayer3: []
+  BallsPlayer4: []
 --- !u!65 &1975567944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19139,7 +19160,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 10, z: 1.0000005}
+  m_Size: {x: 1, y: 5, z: 1.0000005}
   m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!1001 &1978974796
 PrefabInstance:
